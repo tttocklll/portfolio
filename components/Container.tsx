@@ -12,7 +12,7 @@ export default function Container({ children }: { children: React.ReactNode }) {
         <title>tttocklll&apos;s Portfolio</title>
       </Head>
       <Header />
-      {children}
+      <div className="mx-auto max-w-4xl px-4 sm:px-6">{children}</div>
     </div>
   );
 }

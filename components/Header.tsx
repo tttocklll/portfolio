@@ -69,9 +69,9 @@ export default function Header() {
             <div className="px-5 pt-5 pb-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <img
+                  <Image
                     className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                    src={logoImage}
                     alt="tttocklll"
                   />
                 </div>

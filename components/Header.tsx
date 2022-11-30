@@ -4,22 +4,22 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Example() {
+import logoImage from "../public/tttocklll.png";
+
+export default function Header() {
   return (
     <Popover className="relative bg-white">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
-        <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+        <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-14">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <Link href="#">
+            <a href="#">
               <span className="sr-only">tttocklll</span>
               <Image
-                height={32}
-                width={120}
-                objectFit="contain"
-                src="/tttocklll.png"
-                alt=""
+                className="h-8 w-auto sm:h-10"
+                src={logoImage}
+                alt="tttocklll"
               />
-            </Link>
+            </a>
           </div>
           <div className="-my-2 -mr-2 md:hidden">
             <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">

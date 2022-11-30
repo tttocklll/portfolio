@@ -13,6 +13,7 @@ export default function Container({ children }: { children: React.ReactNode }) {
       </Head>
       <Header />
       <div className="mx-auto max-w-4xl px-4 sm:px-6">{children}</div>
+      <footer></footer>
     </div>
   );
 }

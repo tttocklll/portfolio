@@ -2,8 +2,8 @@ import Image from "next/image";
 import { ChevronsDown, User, Briefcase, Mail } from "react-feather";
 
 import ProgrammingImage from "../public/programming.svg";
-import Profile from "./components/Profile";
-import LinkButton from "./components/LinkButton";
+import Profile from "../components/Profile";
+import LinkButton from "../components/LinkButton";
 
 export default function Home() {
   return (

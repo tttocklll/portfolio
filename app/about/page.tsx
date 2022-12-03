@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ExternalLink } from "react-feather";
-import Profile from "../components/Profile";
+import Profile from "../../components/Profile";
 
 export default function About() {
   return (

@@ -6,7 +6,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
 
-import logoImage from "../../public/tttocklll.png";
+import logoImage from "../public/tttocklll.png";
 
 export default function Header() {
   return (

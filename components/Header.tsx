@@ -8,18 +8,18 @@ import logoImage from "../public/tttocklll.png";
 
 export default function Header() {
   return (
-    <Popover className="relative bg-white">
+    <Popover as="header" className="relative bg-white">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
         <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-14">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <a href="#">
+            <Link href="/">
               <span className="sr-only">tttocklll</span>
               <Image
                 className="h-8 w-auto sm:h-10"
                 src={logoImage}
                 alt="tttocklll"
               />
-            </a>
+            </Link>
           </div>
           <div className="-my-2 -mr-2 md:hidden">
             <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -35,10 +35,10 @@ export default function Header() {
               About
             </Link>
             <Link
-              href="/experience"
+              href="/experiences"
               className="text-xl font-medium text-gray-500 hover:text-gray-900"
             >
-              Experience
+              Experiences
             </Link>
           </Popover.Group>
           <div className="hidden space-x-10 justify-end md:flex md:flex-1 lg:w-0">
@@ -92,10 +92,10 @@ export default function Header() {
                   About
                 </Link>
                 <Link
-                  href="/experience"
+                  href="/experiences"
                   className="text-base font-medium text-gray-900 hover:text-gray-700 border-b pb-2"
                 >
-                  Experience
+                  Experiences
                 </Link>
               </div>
             </div>

@@ -1,7 +1,13 @@
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import { ChevronDoubleDownIcon } from "@heroicons/react/24/outline";
-import { Twitter, GitHub, Linkedin } from "react-feather";
+import {
+  Twitter,
+  GitHub,
+  Linkedin,
+  ChevronsDown,
+  User,
+  Briefcase,
+  Mail,
+} from "react-feather";
 
 import Container from "../components/Container";
 import ProgrammingImage from "../public/programming.svg";
@@ -22,13 +28,11 @@ export default function Home() {
           />
 
           <p className="text-xl sm:text-2xl">Scroll to see more</p>
-          <ChevronDoubleDownIcon className="w-8 h-auto my-4 sm:w-10 sm:my-8 animate-bounce" />
+          <ChevronsDown className="w-8 h-auto my-4 sm:w-10 sm:my-8 animate-bounce" />
         </div>
 
-        <div className="space-y-4 w-full flex flex-col justify-center items-center">
-          <h2 className="text-green-600 text-2xl sm:text-4xl after:bg-green-600">
-            About Me
-          </h2>
+        <div className="space-y-4 w-full flex flex-col justify-center items-center pb-8">
+          <h2 className="text-green-600 text-2xl sm:text-4xl">About Me</h2>
           <div className="w-full flex sm:flex-row flex-col items-center border border-gray-100 border-solid rounded-2xl shadow-md p-4 sm:p-8 space-y-4 sm:space-y-0">
             <div className="sm:w-1/4 w-full flex flex-row sm:flex-col justify-center items-center">
               <Image
@@ -40,8 +44,8 @@ export default function Home() {
               />
               <div className="w-full flex flex-col justify-center items-center space-y-2">
                 <div className="flex flex-col justify-center items-center sm:hidden">
-                  <h3 className="text-xl sm:text-2xl font-semibold text-green-600">
-                    大村瞬也
+                  <h3 className="text-xl text-green-600 font-semibold">
+                    大村 瞬也
                   </h3>
                   <p className="text-gray-500">OHMURA Tokiya</p>
                 </div>
@@ -60,8 +64,8 @@ export default function Home() {
             </div>
 
             <div className="sm:w-3/4 w-full flex flex-col justify-center">
-              <h3 className="hidden sm:flex sm:text-2xl sm:mb-2 font-semibold text-green-600">
-                大村瞬也 | OHMURA Tokiya
+              <h3 className="hidden sm:flex text-2xl mb-2 text-green-600 font-semibold">
+                大村 瞬也 | OHMURA Tokiya
               </h3>
               <p className="text-base sm:text-lg ">静岡県浜松市出身。</p>
               <p className="text-base sm:text-lg ">
@@ -77,6 +81,39 @@ export default function Home() {
                 大学卒業後、日本マイクロソフト株式会社に入社。
               </p>
             </div>
+          </div>
+        </div>
+
+        <div className="space-y-4 w-full flex flex-col justify-center items-center">
+          <h2 className="text-green-600 text-2xl sm:text-4xl">Links</h2>
+          <div className="flex flex-col sm:flex-row items-center sm:justify-between space-y-4 sm:space-y-0 w-full">
+            <Link
+              href="/about"
+              className="sm:w-1/4 w-2/3 border border-gray-100 border-solid rounded-2xl shadow-md p-4 flex flex-col items-center align-middle"
+            >
+              <h3 className="text-green-600 text-xl font-semibold pb-2">
+                About
+              </h3>
+              <User className="w-10 h-10" />
+            </Link>
+            <Link
+              href="/experiences"
+              className="sm:w-1/4 w-2/3 border border-gray-100 border-solid rounded-2xl shadow-md p-4 flex flex-col items-center align-middle"
+            >
+              <h3 className="text-green-600 text-xl font-semibold pb-2">
+                Experiences
+              </h3>
+              <Briefcase className="w-10 h-10" />
+            </Link>
+            <Link
+              href="/contact"
+              className="sm:w-1/4 w-2/3 border border-gray-100 border-solid rounded-2xl shadow-md p-4 flex flex-col items-center align-middle"
+            >
+              <h3 className="text-green-600 text-xl font-semibold pb-2">
+                Contact
+              </h3>
+              <Mail className="w-10 h-10" />
+            </Link>
           </div>
         </div>
       </main>

@@ -1,11 +1,10 @@
 import Link from "next/link";
 import { ExternalLink } from "react-feather";
-import Container from "../components/Container";
 import Profile from "../components/Profile";
 
 export default function About() {
   return (
-    <Container>
+    <>
       <div className="space-y-4 w-full flex flex-col justify-center items-center pb-8">
         <h2 className="text-green-600 text-2xl sm:text-4xl">About Me</h2>
         <div>
@@ -103,9 +102,7 @@ export default function About() {
       <div className="space-y-4 w-full flex flex-col justify-center items-center pb-8">
         <h2 className="text-green-600 text-2xl sm:text-4xl">Awards</h2>
         <div className="flex flex-col sm:w-3/4 w-full">
-          {/* <div className="sm:-mx-6 lg:-mx-8"> */}
           <div className="py-2 min-w-full">
-            {/* <div className="overflow-hidden"> */}
             <table className="min-w-full">
               <thead className="border-b-4">
                 <tr>
@@ -157,13 +154,11 @@ export default function About() {
                 </tr>
               </tbody>
             </table>
-            {/* </div> */}
-            {/* </div> */}
           </div>
         </div>
       </div>
 
       <Profile />
-    </Container>
+    </>
   );
 }

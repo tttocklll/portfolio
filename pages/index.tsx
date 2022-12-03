@@ -32,7 +32,7 @@ export default function Home() {
           <div className="w-full flex flex-row border border-gray-100 border-solid rounded-2xl shadow-md">
             <div className="sm:w-1/4 w-1/3 flex flex-col justify-center items-center my-8 sm:my-16">
               <Image
-                src="/profileIcon.JPG"
+                src="/profileIcon.png"
                 height={100}
                 width={100}
                 alt="profile icon"

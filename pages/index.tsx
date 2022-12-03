@@ -43,5 +43,3 @@ export default function Home() {
     </Container>
   );
 }
-
-const a = () => <Briefcase />;

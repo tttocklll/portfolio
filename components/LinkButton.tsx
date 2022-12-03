@@ -13,9 +13,9 @@ export default function LinkButton({
   return (
     <Link
       href={href}
-      className="sm:w-1/4 w-2/3 border border-gray-100 border-solid rounded-2xl shadow-md p-4 flex flex-col items-center align-middle"
+      className="flex w-2/3 flex-col items-center rounded-2xl border border-solid border-gray-100 p-4 align-middle shadow-md sm:w-1/4"
     >
-      <h3 className="text-green-600 text-xl font-semibold pb-2">{text}</h3>
+      <h3 className="pb-2 text-xl font-semibold text-green-600">{text}</h3>
       {React.cloneElement(icon, { className: "w-10 h-10" })}
     </Link>
   );

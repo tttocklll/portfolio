@@ -1,6 +1,6 @@
 import "tailwindcss/tailwind.css";
-import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 export default function RootLayout({
   // Layouts must accept a children prop.
@@ -12,11 +12,9 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body>
-        <div className="flex flex-col mx-auto px-4 min-h-screen">
+        <div className="mx-auto flex min-h-screen flex-col px-4">
           <Header />
-          <div className="flex-1 mx-auto max-w-4xl px-4 sm:px-6 my-4">
-            {children}
-          </div>
+          <div className="mx-auto my-4 max-w-4xl flex-1 px-4 sm:px-6">{children}</div>
           <Footer />
         </div>
       </body>

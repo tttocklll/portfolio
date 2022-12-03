@@ -1,10 +1,10 @@
 "use client";
 
-import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { Fragment } from "react";
 
 import logoImage from "../public/tttocklll.png";
 
@@ -16,11 +16,7 @@ export default function Header() {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href="/">
               <span className="sr-only">tttocklll</span>
-              <Image
-                className="h-8 w-auto sm:h-10"
-                src={logoImage}
-                alt="tttocklll"
-              />
+              <Image className="h-8 w-auto sm:h-10" src={logoImage} alt="tttocklll" />
             </Link>
           </div>
           <div className="-my-2 -mr-2 md:hidden">
@@ -30,10 +26,7 @@ export default function Header() {
             </Popover.Button>
           </div>
           <Popover.Group as="nav" className="hidden space-x-10 md:flex">
-            <Link
-              href="/about"
-              className="text-xl font-medium text-gray-500 hover:text-gray-900"
-            >
+            <Link href="/about" className="text-xl font-medium text-gray-500 hover:text-gray-900">
               About
             </Link>
             <Link
@@ -43,7 +36,7 @@ export default function Header() {
               Experiences
             </Link>
           </Popover.Group>
-          <div className="hidden space-x-10 justify-end md:flex md:flex-1 lg:w-0">
+          <div className="hidden justify-end space-x-10 md:flex md:flex-1 lg:w-0">
             <Link
               href="#"
               className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-green-600 px-4 py-2 text-xl font-medium text-white shadow-sm hover:bg-indigo-700"
@@ -65,17 +58,13 @@ export default function Header() {
       >
         <Popover.Panel
           focus
-          className="absolute top-0 inset-x-0 origin-top-right transform p-2 transition md:hidden"
+          className="absolute inset-x-0 top-0 origin-top-right p-2 transition md:hidden"
         >
-          <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+          <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black/5">
             <div className="px-5 pt-5 pb-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <Image
-                    className="h-8 w-auto"
-                    src={logoImage}
-                    alt="tttocklll"
-                  />
+                  <Image className="h-8 w-auto" src={logoImage} alt="tttocklll" />
                 </div>
                 <div className="-mr-2">
                   <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -86,16 +75,16 @@ export default function Header() {
               </div>
             </div>
             <div className="space-y-6 py-6 px-5">
-              <div className="grid grid-cols gap-y-4 gap-x-8">
+              <div className="grid grid-cols-1 gap-y-4 gap-x-8">
                 <Link
                   href="/about"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700 border-b pb-2"
+                  className="border-b pb-2 text-base font-medium text-gray-900 hover:text-gray-700"
                 >
                   About
                 </Link>
                 <Link
                   href="/experiences"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700 border-b pb-2"
+                  className="border-b pb-2 text-base font-medium text-gray-900 hover:text-gray-700"
                 >
                   Experiences
                 </Link>

@@ -15,7 +15,9 @@ export default function About() {
                 <p className="text-sm text-gray-500">1999/11/02</p>
               </div>
               <div className="mt-0.5 ml-4 mb-6">
-                <h4 className="mb-1.5 text-xl font-semibold text-gray-800">静岡県生まれ</h4>
+                <h4 className="mb-1.5 text-lg font-semibold text-gray-800 sm:text-xl">
+                  静岡県生まれ
+                </h4>
               </div>
             </li>
             <li>
@@ -24,7 +26,7 @@ export default function About() {
                 <p className="text-sm text-gray-500">2015/04</p>
               </div>
               <div className="mt-0.5 ml-4 mb-6">
-                <h4 className="mb-1.5 text-xl font-semibold text-gray-800">
+                <h4 className="mb-1.5 text-lg font-semibold  text-gray-800 sm:text-xl">
                   静岡県立浜松北高校 入学
                 </h4>
               </div>
@@ -35,7 +37,7 @@ export default function About() {
                 <p className="text-sm text-gray-500">2018/04</p>
               </div>
               <div className="mt-0.5 ml-4 pb-5">
-                <h4 className="mb-1.5 text-xl font-semibold text-gray-800">
+                <h4 className="mb-1.5 text-lg font-semibold  text-gray-800 sm:text-xl">
                   東京大学 教養学部 文科II類 入学
                 </h4>
               </div>
@@ -46,7 +48,7 @@ export default function About() {
                 <p className="text-sm text-gray-500">2020/04</p>
               </div>
               <div className="mt-0.5 ml-4 pb-5">
-                <h4 className="mb-1.5 text-xl font-semibold text-gray-800">
+                <h4 className="mb-1.5 text-lg font-semibold  text-gray-800 sm:text-xl">
                   東京大学 工学部{" "}
                   <Link
                     href="https://www.ee.t.u-tokyo.ac.jp/"
@@ -82,7 +84,7 @@ export default function About() {
                 <p className="text-sm text-gray-500">2022/04</p>
               </div>
               <div className="mt-0.5 ml-4 pb-5">
-                <h4 className="mb-1.5 text-xl font-semibold text-gray-800">
+                <h4 className="mb-1.5 text-lg font-semibold  text-gray-800 sm:text-xl">
                   日本マイクロソフト株式会社 入社
                 </h4>
                 <p className="mb-3 text-gray-500">- Microsoft Teams サポート エンジニア</p>
@@ -101,13 +103,13 @@ export default function About() {
                 <tr>
                   <th
                     scope="col"
-                    className="px-2 py-4 text-left text-sm font-medium text-gray-500 sm:px-6"
+                    className="px-2 py-4 text-left text-base font-medium text-gray-500 sm:px-6 sm:text-xl"
                   >
                     Year / Month
                   </th>
                   <th
                     scope="col"
-                    className="px-2 py-4 text-left text-sm font-medium text-gray-500 sm:px-6"
+                    className="px-2 py-4 text-left text-base font-medium text-gray-500 sm:px-6 sm:text-xl"
                   >
                     Award
                   </th>
@@ -115,20 +117,26 @@ export default function About() {
               </thead>
               <tbody>
                 <tr className="border-b">
-                  <td className="px-2 py-4 text-sm font-medium text-gray-500 sm:px-6">2020/09</td>
-                  <td className="px-2 py-4 text-sm font-medium text-black sm:px-6">
+                  <td className="px-2 py-4 text-base font-medium text-gray-500 sm:px-6 sm:text-xl">
+                    2020/09
+                  </td>
+                  <td className="px-2 py-4 text-base font-medium text-black sm:px-6 sm:text-xl">
                     アントレプレナーシップ・チャレンジ2020 第3位
                   </td>
                 </tr>
                 <tr className="border-b bg-white">
-                  <td className="px-2 py-4 text-sm font-medium text-gray-500 sm:px-6">2022/03</td>
-                  <td className="px-2 py-4 text-sm font-medium text-black sm:px-6">
+                  <td className="px-2 py-4 text-base font-medium text-gray-500 sm:px-6 sm:text-xl">
+                    2022/03
+                  </td>
+                  <td className="px-2 py-4 text-base font-medium text-black sm:px-6 sm:text-xl">
                     東京大学 工学部長賞 (研究)
                   </td>
                 </tr>
                 <tr className="border-b bg-white">
-                  <td className="px-2 py-4 text-sm font-medium text-gray-500 sm:px-6">2022/09</td>
-                  <td className="px-2 py-4 text-sm font-medium text-black sm:px-6">
+                  <td className="px-2 py-4 text-base font-medium text-gray-500 sm:px-6 sm:text-xl">
+                    2022/09
+                  </td>
+                  <td className="px-2 py-4 text-base font-medium text-black sm:px-6 sm:text-xl">
                     日本音響学会 第24回 学生優秀発表賞 (
                     <Link href="#" className="text-green-600 underline underline-offset-2">
                       Link <ExternalLink className="inline h-4 w-4" />

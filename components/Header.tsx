@@ -38,7 +38,7 @@ export default function Header() {
           </Popover.Group>
           <div className="hidden justify-end space-x-10 md:flex md:flex-1 lg:w-0">
             <Link
-              href="#"
+              href="https://forms.gle/t18jvVB6x1HdnXbj7"
               className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-green-600 px-4 py-2 text-xl font-medium text-white shadow-sm hover:bg-indigo-700"
             >
               Contact
@@ -87,6 +87,12 @@ export default function Header() {
                   className="border-b pb-2 text-base font-medium text-gray-900 hover:text-gray-700"
                 >
                   Experiences
+                </Link>
+                <Link
+                  href="https://forms.gle/t18jvVB6x1HdnXbj7"
+                  className="flex w-full items-center justify-center rounded-md border border-transparent bg-green-600 px-4 py-2 text-base font-medium text-white shadow-sm"
+                >
+                  Contact
                 </Link>
               </div>
             </div>

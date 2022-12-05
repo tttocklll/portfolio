@@ -29,7 +29,7 @@ export default function Home() {
         <div className="flex w-full flex-col items-center space-y-4 sm:flex-row sm:justify-between sm:space-y-0">
           <LinkButton text="About" href="/about" icon={<User />} />
           <LinkButton text="Experiences" href="/experiences" icon={<Briefcase />} />
-          <LinkButton text="Contact" href="/contact" icon={<Mail />} />
+          <LinkButton text="Contact" href="https://forms.gle/t18jvVB6x1HdnXbj7" icon={<Mail />} />
         </div>
       </div>
     </main>

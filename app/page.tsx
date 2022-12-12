@@ -10,7 +10,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-center py-16">
       <div className="flex flex-col items-center justify-center pb-16">
         <h1 className="text-center text-5xl sm:text-7xl">
-          <span className="text-green-600">tttocklll</span>&apos;s Portfolio
+          Hi, I&apos;m <span className="text-green-600">tocky</span>!
         </h1>
         <Image
           src={ProgrammingImage}

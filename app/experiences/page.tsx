@@ -73,6 +73,7 @@ export default function Experience() {
             href="#"
           />
         </div>
+
         <div className="flex w-full flex-col items-center justify-center space-y-4 pb-8">
           <h2 className="text-2xl text-green-600 sm:text-4xl">Awards</h2>
           <div className="flex w-full flex-col sm:w-3/4">

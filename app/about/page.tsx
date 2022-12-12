@@ -76,6 +76,7 @@ export default function About() {
                   - 卒業論文: 「咽喉マイクを用いた 背景雑音に頑健な
                   英語シャドーイング音声の自動評価」
                 </p>
+                <p className="mb-3 text-gray-500">- 株式会社Stroboでインターン</p>
               </div>
             </li>
             <li>
@@ -139,7 +140,7 @@ export default function About() {
                   <td className="px-2 py-4 text-base font-medium text-black sm:px-6 sm:text-xl">
                     日本音響学会 第24回 学生優秀発表賞 (
                     <Link href="#" className="text-green-600 underline underline-offset-2">
-                      Link <ExternalLink className="inline h-4 w-4" />
+                      Link <ExternalLink className="inline" size="16" />
                     </Link>
                     )
                   </td>

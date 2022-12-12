@@ -45,6 +45,7 @@ export default function Profile() {
           </p>
           <p className="text-base sm:text-lg ">株式会社Stroboでエンジニアインターン。</p>
           <p className="text-base sm:text-lg ">大学卒業後、日本マイクロソフト株式会社に入社。</p>
+          <p className="text-base sm:text-lg ">興味のキーワード: 「教育」「効率化」「音」</p>
         </div>
       </div>
     </div>

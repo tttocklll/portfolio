@@ -6,7 +6,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "biome:check": "biome check --write ./",
+    "biome:format": "biome format --write ./"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.1",

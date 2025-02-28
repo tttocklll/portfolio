@@ -1,11 +1,105 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import { Icon } from 'astro-icon/components';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Profile from '../components/Profile.astro';
 import Layout from '../layouts/Layout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Tokiya's Portfolio">
+	<Header />
+	
+	<main class="container mx-auto px-8">
+		<!-- Hero Section -->
+		<section class="min-h-screen flex flex-col items-center justify-center">
+			<div class="text-center">
+				<h1 class="text-6xl md:text-7xl font-bold text-gold mb-6">
+					Hi, I'm <span class="font-extrabold">tocky</span>!
+				</h1>
+				
+				<p class="text-xl md:text-2xl text-white/80 mt-4 max-w-2xl mx-auto">
+					Software Engineer passionate about creating elegant solutions to complex problems
+				</p>
+				
+				<div class="my-12 max-w-3xl mx-auto">
+					<div class="bg-navy-light rounded-xl overflow-hidden">
+						<img 
+							src="/programming.svg" 
+							alt="Programming illustration" 
+							class="w-full h-auto"
+						/>
+					</div>
+				</div>
+				
+				<div class="h-0.5 w-8 bg-gold mx-auto my-16"></div>
+			</div>
+		</section>
+		
+		<Profile />
+		
+		<section class="py-16">
+			<div class="text-center mb-16">
+				<h2 class="text-2xl font-light text-white mb-4">Links</h2>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+				<a href="/about" class="group">
+					<div class="bg-navy-light rounded-xl overflow-hidden transition-all duration-300">
+						<div class="p-6 flex flex-col items-center">
+							<div class="w-12 h-12 rounded-full flex items-center justify-center mb-4">
+								<Icon name="mdi:account" class="w-6 h-6 text-gold" />
+							</div>
+							<h3 class="text-xl font-semibold text-gold group-hover:text-white transition-colors">About</h3>
+						</div>
+					</div>
+				</a>
+				
+				<a href="/experiences" class="group">
+					<div class="bg-navy-light rounded-xl overflow-hidden transition-all duration-300">
+						<div class="p-6 flex flex-col items-center">
+							<div class="w-12 h-12 rounded-full flex items-center justify-center mb-4">
+								<Icon name="mdi:briefcase" class="w-6 h-6 text-gold" />
+							</div>
+							<h3 class="text-xl font-semibold text-gold group-hover:text-white transition-colors">Experiences</h3>
+						</div>
+					</div>
+				</a>
+				
+				<a href="https://forms.gle/t18jvVB6x1HdnXbj7" target="_blank" class="group">
+					<div class="bg-navy-light rounded-xl overflow-hidden transition-all duration-300">
+						<div class="p-6 flex flex-col items-center">
+							<div class="w-12 h-12 rounded-full flex items-center justify-center mb-4">
+								<Icon name="mdi:email" class="w-6 h-6 text-gold" />
+							</div>
+							<h3 class="text-xl font-semibold text-gold group-hover:text-white transition-colors">Contact</h3>
+						</div>
+					</div>
+				</a>
+			</div>
+		</section>
+	</main>
+	
+	<Footer />
 </Layout>
+
+<style>
+	@keyframes gradient {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
+	
+	.animate-gradient {
+		background-size: 200% 200%;
+		animation: gradient 4s ease infinite;
+	}
+</style>

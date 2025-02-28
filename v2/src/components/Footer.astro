@@ -1,26 +1,11 @@
 ---
-import { Icon } from 'astro-icon/components';
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="py-6 mt-16">
-  <div class="container mx-auto px-8">
-    <div class="flex flex-col md:flex-row justify-between items-center">
-      <div class="mb-4 md:mb-0">
-        <p class="text-white/60 text-sm">© {currentYear} Tokiya Ohmura. All rights reserved.</p>
-      </div>
-      
-      <div class="flex space-x-6 mb-4 md:mb-0">
-        <a href="https://twitter.com/tttockllll" target="_blank" class="text-white/60 hover:text-gold transition-colors">
-          <Icon name="mdi:twitter" class="h-5 w-5" />
-        </a>
-        <a href="https://www.linkedin.com/in/tttocklll/" target="_blank" class="text-white/60 hover:text-gold transition-colors">
-          <Icon name="mdi:linkedin" class="h-5 w-5" />
-        </a>
-        <a href="https://github.com/tttocklll" target="_blank" class="text-white/60 hover:text-gold transition-colors">
-          <Icon name="mdi:github" class="h-5 w-5" />
-        </a>
-      </div>
+<footer class="py-12 mt-24">
+  <div class="max-w-screen-xl mx-auto px-6 md:px-12 lg:px-16">
+    <div class="flex justify-center">
+      <p class="text-white/30 text-xs font-extralight">© {currentYear} Tokiya Ohmura</p>
     </div>
   </div>
 </footer> 

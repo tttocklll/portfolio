@@ -2,33 +2,29 @@
 import { Icon } from 'astro-icon/components';
 ---
 
-<header class="fixed top-0 left-0 right-0 z-50 py-6 px-8">
-  <div class="container mx-auto flex justify-between items-center">
-    <a href="/" class="text-2xl font-light">
-      <span class="text-gold">Tokiya</span>
+<header class="fixed top-0 left-0 right-0 z-50 py-8 px-6 md:px-12 lg:px-16">
+  <div class="max-w-screen-xl mx-auto flex justify-between items-center">
+    <a href="/" class="text-2xl font-extralight">
+      <Icon name="mdi:feather" class="h-6 w-6 text-gold/80" />
     </a>
     
-    <nav class="hidden md:flex space-x-8">
-      <a href="/" class="text-white/80 hover:text-gold transition-colors text-sm uppercase tracking-wider">Home</a>
-      <a href="/about" class="text-white/80 hover:text-gold transition-colors text-sm uppercase tracking-wider">About</a>
-      <a href="/experiences" class="text-white/80 hover:text-gold transition-colors text-sm uppercase tracking-wider">Experiences</a>
-      <a href="https://forms.gle/t18jvVB6x1HdnXbj7" target="_blank" class="text-white/80 hover:text-gold transition-colors text-sm uppercase tracking-wider">Contact</a>
+    <nav class="hidden md:flex space-x-12">
+      <a href="/about" class="text-white/70 hover:text-gold transition-colors text-sm uppercase tracking-widest font-extralight">About</a>
+      <a href="/products" class="text-white/70 hover:text-gold transition-colors text-sm uppercase tracking-widest font-extralight">Works</a>
     </nav>
     
     <div class="flex space-x-4 items-center md:hidden">
-      <button id="menu-toggle" class="text-white/80 hover:text-gold transition-colors">
+      <button id="menu-toggle" class="text-white/70 hover:text-gold transition-colors">
         <Icon name="mdi:menu" class="h-6 w-6" />
       </button>
     </div>
   </div>
   
   <!-- Mobile menu -->
-  <div id="mobile-menu" class="hidden md:hidden bg-navy-light mt-4">
-    <div class="container mx-auto px-8 py-4 flex flex-col space-y-4">
-      <a href="/" class="text-white/80 hover:text-gold transition-colors">Home</a>
-      <a href="/about" class="text-white/80 hover:text-gold transition-colors">About</a>
-      <a href="/experiences" class="text-white/80 hover:text-gold transition-colors">Experiences</a>
-      <a href="https://forms.gle/t18jvVB6x1HdnXbj7" target="_blank" class="text-white/80 hover:text-gold transition-colors">Contact</a>
+  <div id="mobile-menu" class="hidden md:hidden bg-navy/90 backdrop-blur-sm mt-8">
+    <div class="max-w-screen-xl mx-auto px-6 py-8 flex flex-col space-y-6">
+      <a href="/about" class="text-white/70 hover:text-gold transition-colors font-extralight">About</a>
+      <a href="/products" class="text-white/70 hover:text-gold transition-colors font-extralight">Works</a>
     </div>
   </div>
 </header>

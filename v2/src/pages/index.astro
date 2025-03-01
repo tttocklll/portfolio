@@ -1,13 +1,9 @@
 ---
-import { Icon } from "astro-icon/components";
 import tttocklllLogo from "../assets/tttocklll.svg";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Profile from "../components/Profile.astro";
 import Layout from "../layouts/Layout.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout title="Tokiya's Portfolio">
@@ -26,66 +22,7 @@ import Layout from "../layouts/Layout.astro";
 		</section>
 
 		<!-- Introduction Section - Below the first view -->
-		<section class="py-24">
-			<div class="text-center max-w-3xl mx-auto">
-				<p class="text-xl md:text-2xl text-white/70 max-w-2xl mx-auto font-extralight leading-relaxed">
-					Software Engineer passionate about creating elegant solutions to complex problems
-				</p>
-
-				<div class="my-24 max-w-2xl mx-auto">
-					<div class="bg-navy-light/50 rounded-xl overflow-hidden backdrop-blur-sm">
-						<img
-							src="/programming.svg"
-							alt="Programming illustration"
-							class="w-full h-auto opacity-90"
-						/>
-					</div>
-				</div>
-			</div>
-		</section>
-
 		<Profile />
-
-		<section class="py-24">
-			<div class="text-center mb-24">
-				<h2 class="text-2xl font-extralight text-white">Links</h2>
-			</div>
-
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
-				<a href="/about" class="group">
-					<div class="bg-white/70 rounded-xl overflow-hidden transition-all duration-300 backdrop-blur-sm shadow-sm hover:translate-y-[-8px]">
-						<div class="p-10 flex flex-col items-center">
-							<div class="w-12 h-12 rounded-full flex items-center justify-center mb-6">
-								<Icon name="mdi:account" class="w-6 h-6 text-accent/80" />
-							</div>
-							<h3 class="text-xl font-light text-accent group-hover:text-text transition-colors">About</h3>
-						</div>
-					</div>
-				</a>
-
-				<a href="/experiences" class="group">
-					<div class="bg-white/70 rounded-xl overflow-hidden transition-all duration-300 backdrop-blur-sm shadow-sm hover:translate-y-[-8px]">
-						<div class="p-10 flex flex-col items-center">
-							<div class="w-12 h-12 rounded-full flex items-center justify-center mb-6">
-								<Icon name="mdi:briefcase" class="w-6 h-6 text-accent/80" />
-							</div>
-							<h3 class="text-xl font-light text-accent group-hover:text-text transition-colors">Experiences</h3>
-						</div>
-					</div>
-				</a>
-
-				<a href="https://forms.gle/t18jvVB6x1HdnXbj7" target="_blank" class="group">
-					<div class="bg-white/70 rounded-xl overflow-hidden transition-all duration-300 backdrop-blur-sm shadow-sm hover:translate-y-[-8px]">
-						<div class="p-10 flex flex-col items-center">
-							<div class="w-12 h-12 rounded-full flex items-center justify-center mb-6">
-								<Icon name="mdi:email" class="w-6 h-6 text-accent/80" />
-							</div>
-							<h3 class="text-xl font-light text-accent group-hover:text-text transition-colors">Contact</h3>
-						</div>
-					</div>
-				</a>
-			</div>
-		</section>
 	</main>
 
 	<Footer />

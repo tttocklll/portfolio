@@ -7,7 +7,7 @@ export default function SocialIcons() {
         href="https://twitter.com/tttockllll"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-white/40 hover:text-gold/80 transition-colors"
+        className="text-text/40 hover:text-accent/80 transition-colors"
       >
         <Icon icon="mdi:twitter" className="w-5 h-5" />
       </a>
@@ -15,7 +15,7 @@ export default function SocialIcons() {
         href="https://www.linkedin.com/in/tttocklll/"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-white/40 hover:text-gold/80 transition-colors"
+        className="text-text/40 hover:text-accent/80 transition-colors"
       >
         <Icon icon="mdi:linkedin" className="w-5 h-5" />
       </a>
@@ -23,7 +23,7 @@ export default function SocialIcons() {
         href="https://github.com/tttocklll"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-white/40 hover:text-gold/80 transition-colors"
+        className="text-text/40 hover:text-accent/80 transition-colors"
       >
         <Icon icon="mdi:github" className="w-5 h-5" />
       </a>

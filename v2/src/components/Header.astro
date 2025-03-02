@@ -72,9 +72,9 @@ const currentPath = pathname.slice(1); // remove the first "/"
     const target = e.target as HTMLElement;
     const menu = document.getElementById('mobile-menu');
     const button = document.getElementById('menu-toggle');
-    
-    if (menu && !menu.classList.contains('hidden') && 
-        button && !button.contains(target) && 
+
+    if (menu && !menu.classList.contains('hidden') &&
+        button && !button.contains(target) &&
         !menu.contains(target)) {
       menu.classList.add('hidden');
     }

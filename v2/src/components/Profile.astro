@@ -2,7 +2,7 @@
 import profileIcon from "../assets/profile_icon.jpg";
 import KeywordsSection from "./KeywordsSection.astro";
 import ProfileBio from "./ProfileBio.astro";
-import SocialIcons from "./SocialIcons";
+import SocialIcons from "./SocialIcons.astro";
 // Define bio entries
 const bioEntries = [
   "静岡県浜松市出身。浜松北高卒業後。",
@@ -41,7 +41,7 @@ const keywords = [
             <p class="text-text/40 font-extralight tracking-wide">OHMURA Tokiya</p>
             <p class="text-text/40 text-sm mb-6 font-extralight tracking-wide">Senior Software Engineer / picon inc.</p>
 
-            <SocialIcons client:load />
+            <SocialIcons />
           </div>
         </div>
 

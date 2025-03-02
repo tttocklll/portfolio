@@ -1,0 +1,129 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Products | Tokiya's Portfolio">
+  <Header />
+
+  <main class="container mx-auto px-8 pt-24">
+    <!-- Hero Section -->
+    <section class="py-16">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl text-accent mb-8">Products</h1>
+      </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="py-8">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Moodify -->
+          <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+            <div class="aspect-video bg-background flex items-center justify-center">
+              <img src="/imgs/Moodify.png" alt="Moodify" class="object-cover h-full w-full" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-accent mb-2">Moodify</h3>
+              <p class="text-text/80 mb-4">学校現場における、生徒のメンタルを管理する web アプリ。アントレプレナーシップ・チャレンジ2020にて第3位受賞。</p>
+              <a href="https://github.com/tttocklll/Moodify" class="inline-flex items-center text-accent hover:underline">
+                View Project
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- さいほんやくくん -->
+          <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+            <div class="aspect-video bg-background flex items-center justify-center">
+              <img src="/imgs/retranslate.png" alt="さいほんやくくん" class="object-cover h-full w-full" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-accent mb-2">さいほんやくくん</h3>
+              <p class="text-text/80 mb-4">日本語 → 英語 → ... → 日本語 のように、複数の言語に翻訳した後、最初の言語に戻す「再翻訳」のアプリ</p>
+              <a href="https://retranslate.tttocklll.dev/" class="inline-flex items-center text-accent hover:underline">
+                View Project
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 2021年度工学部研究成果発表会 & 五月祭 -->
+          <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+            <div class="aspect-video bg-background flex items-center justify-center">
+              <img src="/imgs/mayfes.png" alt="2021年度工学部研究成果発表会 & 五月祭" class="object-cover h-full w-full" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-accent mb-2">2021年度工学部研究成果発表会 & 五月祭</h3>
+              <p class="text-text/80 mb-4">大学の学園祭にて、学科として出展。VTuber企画では、VTuber「みつえれ」のトラッキングおよびアニメーションを実装。またWebページ制作も一部担当した。</p>
+              <a href="https://2021.eeic.jp/" class="inline-flex items-center text-accent hover:underline">
+                View Project
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- カイルくん -->
+          <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+            <div class="aspect-video bg-background flex items-center justify-center">
+              <img src="/imgs/kairu.png" alt="カイルくん" class="object-cover h-full w-full" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-accent mb-2">カイルくん</h3>
+              <p class="text-text/80 mb-4">社内の配送業務およびCS業務を効率化・簡易化するためのSlack Botを制作。株式会社Stroboにて現在も活躍中！</p>
+              <a href="https://note.com/strobo_inc/n/n506e23a29c3f" class="inline-flex items-center text-accent hover:underline">
+                View Project
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- ぐぐルンです -->
+          <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+            <div class="aspect-video bg-background flex items-center justify-center">
+              <img src="/imgs/menu_reader.png" alt="ぐぐルンです" class="object-cover h-full w-full" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-accent mb-2">ぐぐルンです</h3>
+              <p class="text-text/80 mb-4">文字だけのメニューに画像を載せて、わかりやすいものにするアプリ。文字の読み取り精度を上げ、かつ出力動画のfpsをなるべく落とさないように工夫した。※ 2020年度 OpenCV/GL 実験にて作成</p>
+              <a href="https://github.com/tttocklll/menu_reader" class="inline-flex items-center text-accent hover:underline">
+                View Project
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Parkize -->
+          <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+            <div class="aspect-video bg-background flex items-center justify-center">
+              <img src="/imgs/parkize.png" alt="Parkize" class="object-cover h-full w-full" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-accent mb-2">Parkize</h3>
+              <p class="text-text/80 mb-4">イベント会場における、関係車両の入出庫を管理するWebアプリ</p>
+              <a href="#" class="inline-flex items-center text-accent hover:underline">
+                View Project
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

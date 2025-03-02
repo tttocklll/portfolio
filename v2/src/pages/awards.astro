@@ -1,0 +1,85 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Awards | Tokiya's Portfolio">
+  <Header />
+
+  <main class="container mx-auto px-8 pt-24">
+    <!-- Hero Section -->
+    <section class="py-16">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl text-gold mb-8">Awards</h1>
+      </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section class="py-8">
+      <div class="max-w-4xl mx-auto">
+        <div class="overflow-x-auto">
+          <table class="min-w-full bg-navy-light rounded-xl">
+            <thead class="border-b border-gold/30">
+              <tr>
+                <th class="py-4 px-6 text-left text-lg font-light text-white/60">Year / Month</th>
+                <th class="py-4 px-6 text-left text-lg font-light text-white/60">Award</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gold/10">
+              <tr class="hover:bg-navy">
+                <td class="py-4 px-6 text-white/60">2020/09</td>
+                <td class="py-4 px-6 font-medium text-white">アントレプレナーシップ・チャレンジ2020 第3位</td>
+              </tr>
+              <tr class="hover:bg-navy">
+                <td class="py-4 px-6 text-white/60">2022/03</td>
+                <td class="py-4 px-6 font-medium text-white">東京大学 工学部長賞 (研究)</td>
+              </tr>
+              <tr class="hover:bg-navy">
+                <td class="py-4 px-6 text-white/60">2022/09</td>
+                <td class="py-4 px-6 font-medium text-white">
+                  日本音響学会 第24回 学生優秀発表賞
+                  (<a href="#" class="text-gold hover:underline inline-flex items-center">
+                    Link
+                  </a>)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Description Section -->
+    <section class="py-16">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-light text-white mb-8">Award Details</h2>
+
+        <div class="space-y-12">
+          <div class="bg-navy-light rounded-xl p-8">
+            <h3 class="text-xl font-semibold text-gold mb-4">アントレプレナーシップ・チャレンジ2020</h3>
+            <p class="text-white/80 mb-4">
+              Entrepreneurship Challenge 2020 is a competition where students develop innovative business ideas and pitch them to judges. Our team's project "Moodify" - a web application for managing student mental health in schools - was awarded 3rd place.
+            </p>
+          </div>
+
+          <div class="bg-navy-light rounded-xl p-8">
+            <h3 class="text-xl font-semibold text-gold mb-4">東京大学 工学部長賞</h3>
+            <p class="text-white/80 mb-4">
+              The Faculty of Engineering Dean's Award at the University of Tokyo is presented to students who have demonstrated exceptional research achievements. This award recognized my graduation thesis research on speech processing.
+            </p>
+          </div>
+
+          <div class="bg-navy-light rounded-xl p-8">
+            <h3 class="text-xl font-semibold text-gold mb-4">日本音響学会 学生優秀発表賞</h3>
+            <p class="text-white/80 mb-4">
+              The Student Excellence Presentation Award from the Acoustical Society of Japan is given to students who deliver outstanding presentations at the society's conferences. My presentation on automatic evaluation of English shadowing speech using throat microphones received this recognition.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

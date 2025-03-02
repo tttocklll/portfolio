@@ -1,11 +1,90 @@
 ---
-import Welcome from "../components/Welcome.astro";
+import tttocklllLogo from "../assets/tttocklll.svg";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Profile from "../components/Profile.astro";
 import Layout from "../layouts/Layout.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Tokiya's Portfolio">
+	<Header />
+
+	<main>
+		<!-- Hero Section - Full viewport height with just the name -->
+		<section class="h-screen flex flex-col items-center justify-center">
+			<div class="text-center">
+				<img
+					src={tttocklllLogo.src}
+					alt="tttocklll"
+					class="h-64"
+				/>
+			</div>
+
+			<!-- Simple scroll text positioned above the animated line -->
+			<div class="scroll-indicator">
+				<span class="scroll-text">scroll</span>
+				<div class="scroll-line">
+					<div class="scroll-dot"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Introduction Section - Below the first view -->
+		<Profile />
+	</main>
+
+	<Footer />
 </Layout>
+
+<style>
+	/* Scroll indicator styling */
+	.scroll-indicator {
+		position: absolute;
+		bottom: 2rem;
+		left: 0;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.scroll-text {
+		font-size: 0.75rem;
+		text-transform: lowercase;
+		letter-spacing: 0.1rem;
+		color: var(--color-text);
+		opacity: 0.3;
+		font-weight: 200;
+	}
+
+	.scroll-line {
+		position: relative;
+		width: 1px;
+		height: 3rem;
+		background-color: var(--color-accent);
+		opacity: 0.4;
+	}
+
+	.scroll-dot {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 3px;
+		height: 3px;
+		background-color: var(--color-accent);
+		border-radius: 50%;
+		animation: scrollDown 1.5s infinite ease-in-out;
+	}
+
+	@keyframes scrollDown {
+		0% {
+			transform: translate(-1px, 0);
+			opacity: 1;
+		}
+		100% {
+			transform: translate(-1px, 3rem);
+			opacity: 0;
+		}
+	}
+</style>

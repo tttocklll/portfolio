@@ -35,25 +35,48 @@ import Layout from "../layouts/Layout.astro";
         <ol class="relative border-l border-accent/30">
           <TimelineItem
             title="静岡県生まれ"
-            date="1999/11/02"
-            description="浜松市出身。幼少期から電子工作やプログラミングに興味を持つ。"
+            startDate="1999/11/02"
+            details={[
+              {
+                icon: "mdi:map-marker-outline",
+                content: "袋井市で生まれ、浜松市で育つ"
+              }
+            ]}
           />
-
           <TimelineItem
-            title="静岡県立浜松北高校 入学"
-            date="2015/04"
-            description="地元の進学校に入学。そこで様々な分野に触れる。"
+            title="静岡県立浜松北高校"
+            startDate="2015/04"
+            endDate="2018/03"
+            details={[
+              {
+                icon: "mdi:volleyball",
+                content: "バレーボール部に所属"
+              },
+              {
+                icon: "mdi:star-face",
+                content: "勉強も部活も行事も遊びも全力で楽しんだ"
+              }
+            ]}
           />
-
           <TimelineItem
-            title="東京大学 教養学部 文科二類 入学"
-            date="2018/04"
-            description="当初は文系として入学するも、授業を通じてプログラミングや人工知能に強い関心を持つようになる。"
+            title="東京大学 教養学部 文科二類"
+            startDate="2018/04"
+            endDate="2020/03"
+            details={[
+              {
+                icon: "mdi:book-open-outline",
+                content: "経済学部を目指して入学"
+              },
+              {
+                icon: "mdi:bird",
+                content: "アルバイト先（鳥貴族）を通じてプログラミングやAIに強い関心を持つようになる"
+              }
+            ]}
           />
-
           <TimelineItem
             title="東京大学 工学部 電子情報工学科"
-            date="2020/04"
+            startDate="2020/04"
+            endDate="2022/03"
             details={[
               {
                 icon: "mdi:school-outline",
@@ -77,32 +100,55 @@ import Layout from "../layouts/Layout.astro";
           />
 
           <TimelineItem
-            title="日本マイクロソフト株式会社 入社"
-            date="2022/04"
+            title="日本マイクロソフト株式会社"
+            startDate="2022/04"
+            endDate="2023/04"
             details={[
               {
                 icon: "mdi:microsoft",
-                content: "Microsoft Teams サポート エンジニア"
+                content: "サポートエンジニア"
               },
               {
                 icon: "mdi:information-outline",
-                content: "企業のIT導入支援やトラブルシューティングを担当"
+                content: "Microsoft Teams のテクニカルサポート、障害等のトラブル対応"
               }
             ]}
           />
-
           <TimelineItem
-            title="株式会社picon 入社"
-            date="2023/04"
+            title="株式会社FLYWHEEL"
+            startDate="2023/05"
+            endDate="2024/07"
+            details={[
+              {
+                icon: "mdi:code-tags",
+                content: "ソフトウェアエンジニア"
+              },
+              {
+                icon: "mdi:laptop",
+                content: "企業向け SaaS の開発（フロントエンド）"
+              },
+              {
+                icon: "mdi:brain",
+                content: "LLM を利用したサービスの PoC 開発（バックエンド、フロントエンド）"
+              }
+            ]}
+          />
+          <TimelineItem
+            title="株式会社picon"
+            startDate="2024/08"
             isLast={true}
             details={[
               {
                 icon: "mdi:code-tags",
-                content: "Senior Software Engineer"
+                content: "シニアソフトウェアエンジニア"
+              },
+              {
+                icon: "mdi:brain",
+                content: "AI（主にLLM）を利用したサービスの開発（バックエンド、フロントエンド）"
               },
               {
                 icon: "mdi:lightbulb-outline",
-                content: "新規事業開発を中心としたソフトウェア開発"
+                content: "新規アプリ開発（バックエンド、フロントエンド、機械学習）"
               }
             ]}
           />

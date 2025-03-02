@@ -4,6 +4,9 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import ProfileCard from "../components/ProfileCard.astro";
 import Layout from "../layouts/Layout.astro";
+import { TimelineItem } from "../components/timeline";
+import { SkillCard } from "../components/skills";
+import { AwardCard } from "../components/awards";
 ---
 
 <Layout title="About">
@@ -31,122 +34,85 @@ import Layout from "../layouts/Layout.astro";
         <h2 class="text-2xl font-extralight text-text/80 mb-16">Timeline</h2>
 
         <ol class="relative border-l border-accent/30">
-          <li class="mb-12 ml-6">
-            <span class="absolute flex items-center justify-center w-8 h-8 bg-white rounded-full -left-4 ring-8 ring-white/30 shadow-sm">
-              <div class="w-3 h-3 rounded-full bg-accent"></div>
-            </span>
-            <div class="p-4 bg-white/60 rounded-lg shadow-sm border border-white/40 transition-all hover:shadow-md hover:border-white/60">
-              <h3 class="flex items-center mb-1 text-xl font-light text-accent">
-                静岡県生まれ
-              </h3>
-              <time class="block mb-3 text-sm font-extralight leading-none text-text/60">1999/11/02</time>
-            </div>
-          </li>
+          <TimelineItem
+            title="静岡県生まれ"
+            date="1999/11/02"
+            description="浜松市出身。幼少期から電子工作やプログラミングに興味を持つ。"
+          />
 
-          <li class="mb-12 ml-6">
-            <span class="absolute flex items-center justify-center w-8 h-8 bg-white rounded-full -left-4 ring-8 ring-white/30 shadow-sm">
-              <div class="w-3 h-3 rounded-full bg-accent"></div>
-            </span>
-            <div class="p-4 bg-white/60 rounded-lg shadow-sm border border-white/40 transition-all hover:shadow-md hover:border-white/60">
-              <h3 class="flex items-center mb-1 text-xl font-light text-accent">
-                静岡県立浜松北高校 入学
-              </h3>
-              <time class="block mb-3 text-sm font-extralight leading-none text-text/60">2015/04</time>
-            </div>
-          </li>
+          <TimelineItem
+            title="静岡県立浜松北高校 入学"
+            date="2015/04"
+            description="地元の進学校に入学。そこで様々な分野に触れる。"
+          />
 
-          <li class="mb-12 ml-6">
-            <span class="absolute flex items-center justify-center w-8 h-8 bg-white rounded-full -left-4 ring-8 ring-white/30 shadow-sm">
-              <div class="w-3 h-3 rounded-full bg-accent"></div>
-            </span>
-            <div class="p-4 bg-white/60 rounded-lg shadow-sm border border-white/40 transition-all hover:shadow-md hover:border-white/60">
-              <h3 class="flex items-center mb-1 text-xl font-light text-accent">
-                東京大学 教養学部 文科二類 入学
-              </h3>
-              <time class="block mb-3 text-sm font-extralight leading-none text-text/60">2018/04</time>
-              <p class="text-text/80 font-light">当初は文系として入学するも、授業を通じてプログラミングや人工知能に強い関心を持つようになる。</p>
-            </div>
-          </li>
+          <TimelineItem
+            title="東京大学 教養学部 文科二類 入学"
+            date="2018/04"
+            description="当初は文系として入学するも、授業を通じてプログラミングや人工知能に強い関心を持つようになる。"
+          />
 
-          <li class="mb-12 ml-6">
-            <span class="absolute flex items-center justify-center w-8 h-8 bg-white rounded-full -left-4 ring-8 ring-white/30 shadow-sm">
-              <div class="w-3 h-3 rounded-full bg-accent"></div>
-            </span>
-            <div class="p-4 bg-white/60 rounded-lg shadow-sm border border-white/40 transition-all hover:shadow-md hover:border-white/60">
-              <h3 class="flex items-center mb-1 text-xl font-light text-accent">
-                東京大学 工学部
-                <a href="https://www.ee.t.u-tokyo.ac.jp/" class="text-accent hover:text-accent/70 transition-colors ml-1">
-                  電子情報工学科
-                </a>
-                進学
-              </h3>
-              <time class="block mb-3 text-sm font-extralight leading-none text-text/60">2020/04</time>
-              <div class="space-y-2 text-text/80 font-light">
-                <p>
-                  <Icon name="mdi:school-outline" class="inline-block w-4 h-4 mr-1 text-accent/70" />
-                  <a href="https://www.gavo.t.u-tokyo.ac.jp/" class="text-accent hover:text-accent/70 transition-colors">
-                  峯松研究室
-                  </a> 所属
-                </p>
-                <p>
-                  <Icon name="mdi:trophy-outline" class="inline-block w-4 h-4 mr-1 text-accent/70" />
-                  2022年度 <span class="text-accent">工学部長賞 (研究)</span> 受賞
-                </p>
-                <p>
-                  <Icon name="mdi:file-document-outline" class="inline-block w-4 h-4 mr-1 text-accent/70" />
-                  卒業論文: 「咽喉マイクを用いた 背景雑音に頑健な 英語シャドーイング音声の自動評価」
-                </p>
-                <p>
-                  <Icon name="mdi:briefcase-outline" class="inline-block w-4 h-4 mr-1 text-accent/70" />
-                  株式会社Stroboでインターン
-                </p>
-              </div>
-            </div>
-          </li>
+          <TimelineItem
+            title="東京大学 工学部"
+            date="2020/04"
+            links={[
+              {
+                href: "https://www.ee.t.u-tokyo.ac.jp/",
+                text: "電子情報工学科"
+              }
+            ]}
+            details={[
+              {
+                icon: "mdi:school-outline",
+                content: "峯松研究室",
+                isLink: true,
+                href: "https://www.gavo.t.u-tokyo.ac.jp/"
+              },
+              {
+                icon: "mdi:trophy-outline",
+                content: "2022年度 <span class=\"text-accent\">工学部長賞 (研究)</span> 受賞"
+              },
+              {
+                icon: "mdi:file-document-outline",
+                content: "卒業論文: 「咽喉マイクを用いた 背景雑音に頑健な 英語シャドーイング音声の自動評価」"
+              },
+              {
+                icon: "mdi:briefcase-outline",
+                content: "株式会社Stroboでインターン"
+              }
+            ]}
+          />
 
-          <li class="mb-12 ml-6">
-            <span class="absolute flex items-center justify-center w-8 h-8 bg-white rounded-full -left-4 ring-8 ring-white/30 shadow-sm">
-              <div class="w-3 h-3 rounded-full bg-accent"></div>
-            </span>
-            <div class="p-4 bg-white/60 rounded-lg shadow-sm border border-white/40 transition-all hover:shadow-md hover:border-white/60">
-              <h3 class="flex items-center mb-1 text-xl font-light text-accent">
-                日本マイクロソフト株式会社 入社
-              </h3>
-              <time class="block mb-3 text-sm font-extralight leading-none text-text/60">2022/04</time>
-              <div class="space-y-2 text-text/80 font-light">
-                <p>
-                  <Icon name="mdi:microsoft" class="inline-block w-4 h-4 mr-1 text-accent/70" />
-                  Microsoft Teams サポート エンジニア
-                </p>
-                <p>
-                  <Icon name="mdi:information-outline" class="inline-block w-4 h-4 mr-1 text-accent/70" />
-                  企業のIT導入支援やトラブルシューティングを担当
-                </p>
-              </div>
-            </div>
-          </li>
+          <TimelineItem
+            title="日本マイクロソフト株式会社 入社"
+            date="2022/04"
+            details={[
+              {
+                icon: "mdi:microsoft",
+                content: "Microsoft Teams サポート エンジニア"
+              },
+              {
+                icon: "mdi:information-outline",
+                content: "企業のIT導入支援やトラブルシューティングを担当"
+              }
+            ]}
+          />
 
-          <li class="ml-6">
-            <span class="absolute flex items-center justify-center w-8 h-8 bg-white rounded-full -left-4 ring-8 ring-white/30 shadow-sm">
-              <div class="w-3 h-3 rounded-full bg-accent"></div>
-            </span>
-            <div class="p-4 bg-white/60 rounded-lg shadow-sm border border-white/40 transition-all hover:shadow-md hover:border-white/60">
-              <h3 class="flex items-center mb-1 text-xl font-light text-accent">
-                株式会社picon 入社
-              </h3>
-              <time class="block mb-3 text-sm font-extralight leading-none text-text/60">2023/04</time>
-              <div class="space-y-2 text-text/80 font-light">
-                <p>
-                  <Icon name="mdi:code-tags" class="inline-block w-4 h-4 mr-1 text-accent/70" />
-                  Senior Software Engineer
-                </p>
-                <p>
-                  <Icon name="mdi:lightbulb-outline" class="inline-block w-4 h-4 mr-1 text-accent/70" />
-                  新規事業開発を中心としたソフトウェア開発
-                </p>
-              </div>
-            </div>
-          </li>
+          <TimelineItem
+            title="株式会社picon 入社"
+            date="2023/04"
+            isLast={true}
+            details={[
+              {
+                icon: "mdi:code-tags",
+                content: "Senior Software Engineer"
+              },
+              {
+                icon: "mdi:lightbulb-outline",
+                content: "新規事業開発を中心としたソフトウェア開発"
+              }
+            ]}
+          />
         </ol>
       </div>
     </section>
@@ -157,101 +123,41 @@ import Layout from "../layouts/Layout.astro";
         <h2 class="text-2xl font-extralight text-text/80 mb-16">Skills</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Programming Languages -->
-          <div class="bg-gradient-to-br from-white/40 to-background/90 rounded-xl overflow-hidden backdrop-blur-[2px] border border-white/15 shadow-sm transition-all hover:shadow-md hover:border-white/25">
-            <div class="p-6">
-              <div class="flex items-center mb-4">
-                <Icon name="mdi:code-tags" class="w-6 h-6 text-accent mr-3" />
-                <h3 class="text-xl font-light text-text">Programming</h3>
-              </div>
-              <ul class="space-y-3">
-                <li class="flex items-center">
-                  <div class="w-2 h-2 bg-accent/60 rounded-full mr-2"></div>
-                  <span class="text-text/80 font-extralight">JavaScript / TypeScript</span>
-                </li>
-                <li class="flex items-center">
-                  <div class="w-2 h-2 bg-accent/60 rounded-full mr-2"></div>
-                  <span class="text-text/80 font-extralight">Python</span>
-                </li>
-                <li class="flex items-center">
-                  <div class="w-2 h-2 bg-accent/60 rounded-full mr-2"></div>
-                  <span class="text-text/80 font-extralight">C / C++</span>
-                </li>
-                <li class="flex items-center">
-                  <div class="w-2 h-2 bg-accent/60 rounded-full mr-2"></div>
-                  <span class="text-text/80 font-extralight">HTML / CSS</span>
-                </li>
-                <li class="flex items-center">
-                  <div class="w-2 h-2 bg-accent/60 rounded-full mr-2"></div>
-                  <span class="text-text/80 font-extralight">SQL</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Web Technologies -->
-          <div class="bg-gradient-to-br from-white/40 to-background/90 rounded-xl overflow-hidden backdrop-blur-[2px] border border-white/15 shadow-sm transition-all hover:shadow-md hover:border-white/25">
-            <div class="p-6">
-              <div class="flex items-center mb-4">
-                <Icon name="mdi:web" class="w-6 h-6 text-accent mr-3" />
-                <h3 class="text-xl font-light text-text">Frameworks & Libraries</h3>
-              </div>
-              <ul class="space-y-3">
-                <li class="flex items-center">
-                  <div class="w-2 h-2 bg-accent/60 rounded-full mr-2"></div>
-                  <span class="text-text/80 font-extralight">React / Next.js</span>
-                </li>
-                <li class="flex items-center">
-                  <div class="w-2 h-2 bg-accent/60 rounded-full mr-2"></div>
-                  <span class="text-text/80 font-extralight">Astro</span>
-                </li>
-                <li class="flex items-center">
-                  <div class="w-2 h-2 bg-accent/60 rounded-full mr-2"></div>
-                  <span class="text-text/80 font-extralight">TailwindCSS</span>
-                </li>
-                <li class="flex items-center">
-                  <div class="w-2 h-2 bg-accent/60 rounded-full mr-2"></div>
-                  <span class="text-text/80 font-extralight">Node.js / Express</span>
-                </li>
-                <li class="flex items-center">
-                  <div class="w-2 h-2 bg-accent/60 rounded-full mr-2"></div>
-                  <span class="text-text/80 font-extralight">PyTorch / TensorFlow</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Tools & Platforms -->
-          <div class="bg-gradient-to-br from-white/40 to-background/90 rounded-xl overflow-hidden backdrop-blur-[2px] border border-white/15 shadow-sm transition-all hover:shadow-md hover:border-white/25">
-            <div class="p-6">
-              <div class="flex items-center mb-4">
-                <Icon name="mdi:tools" class="w-6 h-6 text-accent mr-3" />
-                <h3 class="text-xl font-light text-text">Tools & Platforms</h3>
-              </div>
-              <ul class="space-y-3">
-                <li class="flex items-center">
-                  <div class="w-2 h-2 bg-accent/60 rounded-full mr-2"></div>
-                  <span class="text-text/80 font-extralight">Git / GitHub</span>
-                </li>
-                <li class="flex items-center">
-                  <div class="w-2 h-2 bg-accent/60 rounded-full mr-2"></div>
-                  <span class="text-text/80 font-extralight">Docker</span>
-                </li>
-                <li class="flex items-center">
-                  <div class="w-2 h-2 bg-accent/60 rounded-full mr-2"></div>
-                  <span class="text-text/80 font-extralight">AWS / Azure</span>
-                </li>
-                <li class="flex items-center">
-                  <div class="w-2 h-2 bg-accent/60 rounded-full mr-2"></div>
-                  <span class="text-text/80 font-extralight">Linux / Unix</span>
-                </li>
-                <li class="flex items-center">
-                  <div class="w-2 h-2 bg-accent/60 rounded-full mr-2"></div>
-                  <span class="text-text/80 font-extralight">VSCode / JetBrains IDE</span>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <SkillCard
+            title="Programming"
+            icon="mdi:code-tags"
+            skills={[
+              "JavaScript / TypeScript",
+              "Python",
+              "C / C++",
+              "HTML / CSS",
+              "SQL"
+            ]}
+          />
+          
+          <SkillCard
+            title="Frameworks & Libraries"
+            icon="mdi:web"
+            skills={[
+              "React / Next.js",
+              "Astro",
+              "TailwindCSS",
+              "Node.js / Express",
+              "PyTorch / TensorFlow"
+            ]}
+          />
+          
+          <SkillCard
+            title="Tools & Platforms"
+            icon="mdi:tools"
+            skills={[
+              "Git / GitHub",
+              "Docker",
+              "AWS / Azure",
+              "Linux / Unix",
+              "VSCode / JetBrains IDE"
+            ]}
+          />
         </div>
       </div>
     </section>
@@ -262,50 +168,30 @@ import Layout from "../layouts/Layout.astro";
         <h2 class="text-2xl font-extralight text-text/80 mb-16">Awards</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Award Card 1 -->
-          <div class="bg-gradient-to-br from-white/40 to-background/90 rounded-xl overflow-hidden backdrop-blur-[2px] border border-white/15 shadow-sm hover:shadow-md transition-all">
-            <div class="p-6">
-              <div class="flex justify-between items-start mb-4">
-                <h3 class="text-lg font-medium text-accent">アントレプレナーシップ・チャレンジ2020</h3>
-                <span class="text-xs font-light bg-accent/10 text-accent px-2 py-1 rounded-full">第3位</span>
-              </div>
-              <time class="block mb-3 text-sm font-light text-text/60">2020年9月</time>
-              <p class="text-text/80 text-sm">
-                学生向けのビジネスコンテストで、学校現場における生徒のメンタルヘルスケアアプリ「Moodify」を提案し、第3位を受賞。
-              </p>
-            </div>
-          </div>
+          <AwardCard
+            title="アントレプレナーシップ・チャレンジ2020"
+            badge="第3位"
+            date="2020年9月"
+            description="学生向けのビジネスコンテストで、学校現場における生徒のメンタルヘルスケアアプリ「Moodify」を提案し、第3位を受賞。"
+          />
 
-          <!-- Award Card 2 -->
-          <div class="bg-gradient-to-br from-white/40 to-background/90 rounded-xl overflow-hidden backdrop-blur-[2px] border border-white/15 shadow-sm hover:shadow-md transition-all">
-            <div class="p-6">
-              <div class="flex justify-between items-start mb-4">
-                <h3 class="text-lg font-medium text-accent">東京大学 工学部長賞</h3>
-                <span class="text-xs font-light bg-accent/10 text-accent px-2 py-1 rounded-full">研究</span>
-              </div>
-              <time class="block mb-3 text-sm font-light text-text/60">2022年3月</time>
-              <p class="text-text/80 text-sm">
-                卒業研究「咽喉マイクを用いた背景雑音に頑健な英語シャドーイング音声の自動評価」に対して授与。
-              </p>
-            </div>
-          </div>
+          <AwardCard
+            title="東京大学 工学部長賞"
+            badge="研究"
+            date="2022年3月"
+            description="卒業研究「咽喉マイクを用いた背景雑音に頑健な英語シャドーイング音声の自動評価」に対して授与。"
+          />
 
-          <!-- Award Card 3 -->
-          <div class="bg-gradient-to-br from-white/40 to-background/90 rounded-xl overflow-hidden backdrop-blur-[2px] border border-white/15 shadow-sm hover:shadow-md transition-all">
-            <div class="p-6">
-              <div class="flex justify-between items-start mb-4">
-                <h3 class="text-lg font-medium text-accent">日本音響学会 学生優秀発表賞</h3>
-                <span class="text-xs font-light bg-accent/10 text-accent px-2 py-1 rounded-full">第24回</span>
-              </div>
-              <time class="block mb-3 text-sm font-light text-text/60">2022年9月</time>
-              <p class="text-text/80 text-sm">
-                音声処理技術に関する研究発表が評価され、日本音響学会より学生優秀発表賞を受賞。
-                <a href="#" class="text-accent hover:underline text-xs ml-1">
-                  詳細リンク
-                </a>
-              </p>
-            </div>
-          </div>
+          <AwardCard
+            title="日本音響学会 学生優秀発表賞"
+            badge="第24回"
+            date="2022年9月"
+            description="音声処理技術に関する研究発表が評価され、日本音響学会より学生優秀発表賞を受賞。"
+            link={{
+              href: "#",
+              text: "詳細リンク"
+            }}
+          />
         </div>
       </div>
     </section>

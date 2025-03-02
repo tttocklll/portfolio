@@ -1,1 +1,1 @@
-export { default as AwardCard } from './AwardCard.astro';
+export { default as AwardCard } from "./AwardCard.astro";

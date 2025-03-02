@@ -1,1 +1,1 @@
-export { default as SkillCard } from './SkillCard.astro';
+export { default as SkillCard } from "./SkillCard.astro";

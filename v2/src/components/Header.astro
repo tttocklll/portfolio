@@ -30,17 +30,24 @@ const currentPath = pathname.slice(1); // remove the first "/"
   </div>
 
   <!-- Mobile menu -->
-  <div id="mobile-menu" class="hidden fixed left-0 right-0 top-[60px] md:hidden bg-background/95 backdrop-blur-sm shadow-md rounded-b-lg z-50">
-    <div class="max-w-screen-xl mx-auto px-6 py-8 flex flex-col space-y-6">
-      <a href="/" class={`font-extralight transition-colors ${currentPath === "" ? "text-accent" : "text-text/70 hover:text-accent"}`}>
+  <div id="mobile-menu" class="hidden fixed inset-0 md:hidden bg-background/95 backdrop-blur-md z-50 flex flex-col">
+    <div class="absolute top-4 left-6">
+      <button id="close-menu" class="text-accent hover:text-text/70 transition-colors">
+        <Icon name="mdi:close" class="h-6 w-6" />
+      </button>
+    </div>
+    <div class="flex-1 flex items-center justify-center">
+      <div class="px-6 py-8 flex flex-col space-y-8 text-center">
+      <a href="/" class={`text-xl font-extralight transition-colors ${currentPath === "" ? "text-accent" : "text-text/70 hover:text-accent"}`}>
         Home
       </a>
-      <a href="/about" class={`font-extralight transition-colors ${currentPath === "about" ? "text-accent" : "text-text/70 hover:text-accent"}`}>
+      <a href="/about" class={`text-xl font-extralight transition-colors ${currentPath === "about" ? "text-accent" : "text-text/70 hover:text-accent"}`}>
         About
       </a>
-      <a href="/works" class={`font-extralight transition-colors ${currentPath === "works" ? "text-accent" : "text-text/70 hover:text-accent"}`}>
+      <a href="/works" class={`text-xl font-extralight transition-colors ${currentPath === "works" ? "text-accent" : "text-text/70 hover:text-accent"}`}>
         Works
       </a>
+      </div>
     </div>
   </div>
 </header>
@@ -51,7 +58,15 @@ const currentPath = pathname.slice(1); // remove the first "/"
   const mobileMenu = document.getElementById('mobile-menu');
 
   menuToggle?.addEventListener('click', () => {
-    mobileMenu?.classList.toggle('hidden');
+    mobileMenu?.classList.remove('hidden');
+    document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+  });
+
+  // Close menu with close button
+  const closeMenu = document.getElementById('close-menu');
+  closeMenu?.addEventListener('click', () => {
+    mobileMenu?.classList.add('hidden');
+    document.body.style.overflow = ''; // Restore scrolling
   });
 
   // Close menu when clicking outside
@@ -64,6 +79,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
         button && !button.contains(target) &&
         !menu.contains(target)) {
       menu.classList.add('hidden');
+      document.body.style.overflow = ''; // Restore scrolling
     }
   });
 
@@ -73,6 +89,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
       const mobileMenu = document.getElementById('mobile-menu');
       if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
         mobileMenu.classList.add('hidden');
+        document.body.style.overflow = ''; // Restore scrolling
       }
     }
   });

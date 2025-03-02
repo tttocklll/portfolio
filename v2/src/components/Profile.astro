@@ -1,24 +1,21 @@
 ---
-import { Icon } from "astro-icon/components";
 import profileIcon from "../assets/profile_icon.jpg";
-import SocialIcons from "./SocialIcons";
-import ProfileBio from "./ProfileBio.astro";
 import KeywordsSection from "./KeywordsSection.astro";
-
+import ProfileBio from "./ProfileBio.astro";
+import SocialIcons from "./SocialIcons";
 // Define bio entries
 const bioEntries = [
-  "静岡県浜松市出身。",
-  "浜松北高卒業後、東京大学文科II類に入学。",
-  "アルバイト先の経験からITに興味を持ち、理転し工学部電子情報工学科に進学。",
-  "株式会社Stroboでエンジニアインターン。",
-  "大学卒業後、日本マイクロソフト株式会社に入社。"
+  "静岡県浜松市出身。浜松北高卒業後。",
+  "東京大学文科二類に入学後 IT に興味を持ち、理転し工学部電子情報工学科に進学。工学部長賞受賞。",
+  "Microsoft, FLYWHEEL でエンジニアを経験後、picon に入社。",
+  "新規事業を中心にフロントエンドやバックエンド、機械学習まで幅広く担当。",
 ];
 
 // Define keywords
 const keywords = [
   { icon: "mdi:school", text: "教育" },
   { icon: "mdi:lightning-bolt", text: "効率化" },
-  { icon: "mdi:music", text: "音" }
+  { icon: "mdi:music", text: "音" },
 ];
 ---
 <section class="w-full py-32" id="profile">
@@ -39,7 +36,8 @@ const keywords = [
 
           <div class="mt-8 text-center">
             <h3 class="text-2xl font-light text-accent mb-1">大村 瞬也</h3>
-            <p class="text-text/40 mb-6 font-extralight tracking-wide">OHMURA Tokiya</p>
+            <p class="text-text/40 font-extralight tracking-wide">OHMURA Tokiya</p>
+            <p class="text-text/40 text-sm mb-6 font-extralight tracking-wide">Senior Software Engineer / picon inc.</p>
 
             <SocialIcons client:load />
           </div>

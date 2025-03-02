@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="175" height="120">
-  <text x="10" y="80" font-size="50" fill="none" stroke="#000" stroke-width="1.5">
+  <text x="10" y="80" font-size="50" fill="none" stroke="#2e2a2c" stroke-width="1.5">
     tttocklll
     <animate attributeName="stroke-dashoffset"
              from="500" to="0"
@@ -7,7 +7,7 @@
              fill="freeze"
              repeatCount="1"/>
     <animate attributeName="fill"
-             from="transparent" to="#000"
+             from="transparent" to="#2e2a2c"
              begin="3s"
              dur="0.5s"
              fill="freeze"/>

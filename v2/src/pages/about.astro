@@ -1,12 +1,11 @@
 ---
-import { Icon } from "astro-icon/components";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import ProfileCard from "../components/ProfileCard.astro";
+import AwardCard from "../components/awards/AwardCard.astro";
+import SkillCard from "../components/skills/SkillCard.astro";
+import TimelineItem from "../components/timeline/TimelineItem.astro";
 import Layout from "../layouts/Layout.astro";
-import { TimelineItem } from "../components/timeline";
-import { SkillCard } from "../components/skills";
-import { AwardCard } from "../components/awards";
 ---
 
 <Layout title="About">
@@ -53,14 +52,8 @@ import { AwardCard } from "../components/awards";
           />
 
           <TimelineItem
-            title="東京大学 工学部"
+            title="東京大学 工学部 電子情報工学科"
             date="2020/04"
-            links={[
-              {
-                href: "https://www.ee.t.u-tokyo.ac.jp/",
-                text: "電子情報工学科"
-              }
-            ]}
             details={[
               {
                 icon: "mdi:school-outline",
@@ -134,7 +127,7 @@ import { AwardCard } from "../components/awards";
               "SQL"
             ]}
           />
-          
+
           <SkillCard
             title="Frameworks & Libraries"
             icon="mdi:web"
@@ -146,7 +139,7 @@ import { AwardCard } from "../components/awards";
               "PyTorch / TensorFlow"
             ]}
           />
-          
+
           <SkillCard
             title="Tools & Platforms"
             icon="mdi:tools"

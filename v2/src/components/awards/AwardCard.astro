@@ -13,7 +13,7 @@ export interface Props {
 const { title, badge, date, description, link } = Astro.props;
 ---
 
-<div class="bg-gradient-to-br from-white/40 to-background/90 rounded-xl overflow-hidden backdrop-blur-[2px] border border-white/15 shadow-sm hover:shadow-md transition-all">
+<div class="card-bg">
   <div class="p-6">
     <div class="flex justify-between items-start mb-4">
       <h3 class="text-lg font-medium text-accent">{title}</h3>

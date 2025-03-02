@@ -11,8 +11,11 @@ import Layout from "../layouts/Layout.astro";
 
 	<main>
 		<!-- Hero Section - Full viewport height with just the name -->
-		<section class="h-screen flex flex-col items-center justify-center">
-			<div class="text-center">
+		<section class="h-screen flex flex-col items-center justify-center relative">
+			<div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+			<div class="absolute right-0 top-0 w-96 h-96 bg-accent/8 rounded-full blur-3xl -z-10 transform translate-x-1/3 -translate-y-1/3"></div>
+			<div class="absolute left-0 bottom-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl -z-10 transform -translate-x-1/3 translate-y-1/3"></div>
+			<div class="text-center relative z-10">
 				<img
 					src={tttocklllLogo.src}
 					alt="tttocklll"
@@ -30,8 +33,10 @@ import Layout from "../layouts/Layout.astro";
 		</section>
 
 		<!-- Introduction Section - Below the first view -->
-		<section class="py-12">
-			<div class="max-w-4xl mx-auto px-6">
+		<section class="py-12 relative overflow-hidden">
+			<div class="absolute left-0 bottom-1/4 w-72 h-72 bg-accent/5 rounded-full blur-3xl -z-10 transform -translate-x-1/2"></div>
+			<div class="absolute right-0 top-1/3 w-64 h-64 bg-accent/3 rounded-full blur-3xl -z-10 transform translate-x-1/3"></div>
+			<div class="max-w-4xl mx-auto px-6 relative z-10">
 				<h2 class="text-2xl font-extralight text-text/80 mb-16">Profile</h2>
 				<ProfileCard />
 			</div>
@@ -91,5 +96,29 @@ import Layout from "../layouts/Layout.astro";
 			transform: translate(-1px, 3rem);
 			opacity: 0;
 		}
+	}
+
+	/* Grid pattern background */
+	.bg-grid-pattern {
+		background-image: 
+			linear-gradient(to right, var(--color-accent-muted) 1px, transparent 1px),
+			linear-gradient(to bottom, var(--color-accent-muted) 1px, transparent 1px);
+		background-size: 20px 20px;
+	}
+	
+	/* Section subtle decoration */
+	section {
+		position: relative;
+	}
+	
+	section::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background: linear-gradient(90deg, transparent, var(--color-accent-muted) 20%, var(--color-accent-muted) 80%, transparent);
+		opacity: 0.1;
+		bottom: 0;
 	}
 </style>

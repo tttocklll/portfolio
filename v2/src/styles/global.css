@@ -4,6 +4,7 @@
   --color-background: #f4f5f7;
   --color-text: #2e2a2c;
   --color-accent: #f63f35;
+  --color-accent-muted: rgba(246, 63, 53, 0.3);
 }
 
 /* カスタムユーティリティ */

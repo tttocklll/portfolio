@@ -1,6 +1,4 @@
 ---
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
 import ProfileCard from "../components/ProfileCard.astro";
 import AwardCard from "../components/awards/AwardCard.astro";
 import SkillCard from "../components/skills/SkillCard.astro";
@@ -8,9 +6,7 @@ import TimelineItem from "../components/timeline/TimelineItem.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="About">
-  <Header />
-
+<Layout title="About | tttocklll">
   <main>
     <!-- Hero Section -->
     <section class="min-h-[20vh] flex flex-col items-center justify-center py-12 md:py-16 mt-12 md:mt-16 relative">
@@ -240,8 +236,6 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </section>
   </main>
-
-  <Footer />
 </Layout>
 
 <style>
@@ -253,20 +247,20 @@ import Layout from "../layouts/Layout.astro";
   .timeline-item:hover {
     transform: translateX(5px);
   }
-  
+
   /* Grid pattern background */
   .bg-grid-pattern {
-    background-image: 
+    background-image:
       linear-gradient(to right, var(--color-accent-muted) 1px, transparent 1px),
       linear-gradient(to bottom, var(--color-accent-muted) 1px, transparent 1px);
     background-size: 20px 20px;
   }
-  
+
   /* Section subtle decoration */
   section {
     position: relative;
   }
-  
+
   section::after {
     content: '';
     position: absolute;
@@ -277,13 +271,13 @@ import Layout from "../layouts/Layout.astro";
     opacity: 0.1;
     bottom: 0;
   }
-  
+
   /* Mobile-specific styles */
   @media (max-width: 768px) {
     h1.text-4xl {
       font-size: 2rem;
     }
-    
+
     /* Adjust spacing between sections */
     section {
       padding-top: 2rem;

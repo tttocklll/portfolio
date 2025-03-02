@@ -1,4 +1,4 @@
-export default function ProjectCard({ title, description, image, href, tags = [] }) {
+export default function ProjectCard({ title, description, image, href, tags = [], year }) {
   return (
     <div className="flex flex-col h-full bg-card-bg rounded-xl overflow-hidden hover:shadow-md transition-shadow duration-300">
       <div className="relative aspect-video bg-background flex items-center justify-center overflow-hidden">
@@ -17,6 +17,7 @@ export default function ProjectCard({ title, description, image, href, tags = []
         >
           <h3 className="text-xl font-semibold text-accent group-hover:text-accent/80 transition-colors flex items-center">
             {title}
+            {year && <span className="ml-2 text-sm text-text/60 font-normal">{year}</span>}
           </h3>
         </a>
 

@@ -11,13 +11,21 @@ import Layout from "../layouts/Layout.astro";
 
 	<main>
 		<!-- Hero Section - Full viewport height with just the name -->
-		<section class="h-screen flex flex-col items-center justify-center">
+		<section class="h-screen flex flex-col items-center justify-center relative">
 			<div class="text-center">
 				<img
 					src={tttocklllLogo.src}
 					alt="tttocklll"
 					class="h-64"
 				/>
+			</div>
+			
+			<!-- Enhanced Scroll Indicator -->
+			<div class="absolute bottom-8 left-0 right-0 flex flex-col items-center">
+				<span class="text-text/30 text-xs font-extralight mb-2">SCROLL</span>
+				<div class="scroll-indicator-line">
+					<div class="scroll-indicator-dot"></div>
+				</div>
 			</div>
 		</section>
 
@@ -29,21 +37,29 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style>
-	/* Add a subtle scroll indicator */
-	@keyframes fadeInOut {
-		0%, 100% { opacity: 0.3; }
-		50% { opacity: 0.8; }
+	/* Enhanced scroll indicator */
+	@keyframes scrollDown {
+		0% { transform: translateY(0); opacity: 1; }
+		100% { transform: translateY(20px); opacity: 0; }
 	}
 
-	section:first-of-type::after {
-		content: "";
-		position: absolute;
-		bottom: 2rem;
-		left: 50%;
-		transform: translateX(-50%);
+	.scroll-indicator-line {
+		position: relative;
 		width: 1px;
-		height: 3rem;
+		height: 40px;
 		background-color: var(--color-accent);
-		animation: fadeInOut 2s infinite;
+		opacity: 0.4;
+	}
+
+	.scroll-indicator-dot {
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translateX(-50%);
+		width: 5px;
+		height: 5px;
+		background-color: var(--color-accent);
+		border-radius: 50%;
+		animation: scrollDown 1.8s infinite ease-out;
 	}
 </style>

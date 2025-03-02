@@ -1,0 +1,111 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import ProjectCard from "../components/ProjectCard";
+import Layout from "../layouts/Layout.astro";
+
+// Define projects data
+const projects = [
+  {
+    title: "Moodify",
+    description:
+      "学校現場における、生徒のメンタルを管理する web アプリ。アントレプレナーシップ・チャレンジ2020にて第3位受賞。",
+    image: "/imgs/Moodify.png",
+    href: "https://github.com/tttocklll/Moodify",
+  },
+  {
+    title: "さいほんやくくん",
+    description:
+      "日本語 → 英語 → ... → 日本語 のように、複数の言語に翻訳した後、最初の言語に戻す「再翻訳」のアプリ",
+    image: "/imgs/retranslate.png",
+    href: "https://retranslate.tttocklll.dev/",
+  },
+  {
+    title: "2021年度工学部研究成果発表会 & 五月祭",
+    description:
+      "大学の学園祭にて、学科として出展。VTuber企画では、VTuber「みつえれ」のトラッキングおよびアニメーションを実装。またWebページ制作も一部担当した。",
+    image: "/imgs/mayfes.png",
+    href: "https://2021.eeic.jp/",
+  },
+  {
+    title: "カイルくん",
+    description:
+      "社内の配送業務およびCS業務を効率化・簡易化するためのSlack Botを制作。株式会社Stroboにて現在も活躍中！",
+    image: "/imgs/kairu.png",
+    href: "https://note.com/strobo_inc/n/n506e23a29c3f",
+  },
+  {
+    title: "ぐぐるンです",
+    description:
+      "文字だけのメニューに画像を載せて、わかりやすいものにするアプリ。文字の読み取り精度を上げ、かつ出力動画のfpsをなるべく落とさないように工夫した。※ 2020年度 OpenCV/GL 実験にて作成",
+    image: "/imgs/menu_reader.png",
+    href: "https://github.com/tttocklll/menu_reader",
+  },
+  {
+    title: "Parkize",
+    description: "イベント会場における、関係車両の入出庫を管理するWebアプリ",
+    image: "/imgs/parkize.png",
+    href: "#",
+  },
+];
+---
+
+<Layout title="Works | Tokiya's Portfolio">
+  <Header />
+
+  <main>
+    <!-- Hero Section -->
+    <section class="min-h-[20vh] flex flex-col items-center justify-center py-16 mt-16">
+      <div class="text-center max-w-4xl mx-auto px-6">
+        <h1 class="text-4xl font-extralight text-accent opacity-90">Works</h1>
+      </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="py-12">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 projects-grid">
+          {projects.map((project) => (
+            <ProjectCard
+              title={project.title}
+              description={project.description}
+              image={project.image}
+              href={project.href}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* Add custom animations for project cards on hover */
+  :global(.project-card-container) {
+    transition: all 0.3s ease;
+  }
+
+  :global(.project-card-container:hover) {
+    transform: translateY(-5px);
+  }
+
+  /* Add a subtle fade-in animation for projects */
+  .projects-grid > div {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+  }
+
+  .projects-grid > div:nth-child(1) { animation-delay: 0.1s; }
+  .projects-grid > div:nth-child(2) { animation-delay: 0.2s; }
+  .projects-grid > div:nth-child(3) { animation-delay: 0.3s; }
+  .projects-grid > div:nth-child(4) { animation-delay: 0.4s; }
+  .projects-grid > div:nth-child(5) { animation-delay: 0.5s; }
+  .projects-grid > div:nth-child(6) { animation-delay: 0.6s; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>

@@ -1,6 +1,6 @@
 export default function ProjectCard({ title, description, image, href, tags = [], year }) {
   return (
-    <div className="flex flex-col h-full bg-card-bg rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-transparent hover:border-accent/20">
+    <div className="flex flex-col h-full w-full bg-card-bg rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-transparent hover:border-accent/20">
       <div className="relative aspect-video bg-background flex items-center justify-center overflow-hidden">
         <img
           src={image}

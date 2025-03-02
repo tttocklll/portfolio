@@ -1,13 +1,12 @@
 ---
+import { Icon } from "astro-icon/components";
+
 export interface Props {
   title: string;
   badge?: string;
   date: string;
   description: string;
-  link?: {
-    href: string;
-    text: string;
-  };
+  link?: string;
 }
 
 const { title, badge, date, description, link } = Astro.props;
@@ -16,7 +15,16 @@ const { title, badge, date, description, link } = Astro.props;
 <div class="card-bg">
   <div class="p-6">
     <div class="flex justify-between items-start mb-4">
-      <h3 class="text-lg font-medium text-accent">{title}</h3>
+      <h3 class="text-lg font-medium text-accent">
+        {link ? (
+          <a href={link} class="hover:underline flex items-center gap-1" target="_blank" rel="noopener noreferrer">
+            {title}
+            <Icon name="mdi:open-in-new" />
+          </a>
+        ) :
+          title
+        }
+      </h3>
       {badge && (
         <span class="text-xs font-light bg-accent/10 text-accent px-2 py-1 rounded-full">{badge}</span>
       )}
@@ -24,11 +32,6 @@ const { title, badge, date, description, link } = Astro.props;
     <time class="block mb-3 text-sm font-light text-text/60">{date}</time>
     <p class="text-text/80 text-sm">
       {description}
-      {link && (
-        <a href={link.href} class="text-accent hover:underline text-xs ml-1">
-          {link.text}
-        </a>
-      )}
     </p>
   </div>
 </div>

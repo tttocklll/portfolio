@@ -160,30 +160,29 @@ import Layout from "../layouts/Layout.astro";
       <div class="max-w-4xl mx-auto px-6">
         <h2 class="text-2xl font-extralight text-text/80 mb-16">Awards</h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- 横に並べるのは最大2つ -->
+        <div class="grid grid-cols-1 grid-cols-2 gap-8">
           <AwardCard
-            title="アントレプレナーシップ・チャレンジ2020"
-            badge="第3位"
-            date="2020年9月"
-            description="学生向けのビジネスコンテストで、学校現場における生徒のメンタルヘルスケアアプリ「Moodify」を提案し、第3位を受賞。"
+            title="KDH CUP 第1回プログラミング大会 優勝"
+            date="2023/12"
+            description="KDDI Digital Divergence Holdings グループ全体のプログラミングコンテストにて優勝。"
+            link="https://www.flywheel.jp/topics/kdhcup_programming_contest01/"
           />
-
-          <AwardCard
-            title="東京大学 工学部長賞"
-            badge="研究"
-            date="2022年3月"
-            description="卒業研究「咽喉マイクを用いた背景雑音に頑健な英語シャドーイング音声の自動評価」に対して授与。"
-          />
-
           <AwardCard
             title="日本音響学会 学生優秀発表賞"
-            badge="第24回"
-            date="2022年9月"
+            date="2022/09"
             description="音声処理技術に関する研究発表が評価され、日本音響学会より学生優秀発表賞を受賞。"
-            link={{
-              href: "#",
-              text: "詳細リンク"
-            }}
+            link="https://www.ee.t.u-tokyo.ac.jp/news/%E9%9B%BB%E5%AD%90%E6%83%85%E5%A0%B1%E5%B7%A5%E5%AD%A6%E7%A7%914%E5%B9%B4-%E7%99%BA%E8%A1%A8%E5%BD%93%E6%99%82-%E5%A4%A7%E6%9D%91%E7%9E%AC%E4%B9%9F%E3%81%95%E3%82%93%E3%81%8C%E9%9F%B3%E9%9F%BF%E5%AD%A6%E4%BC%9A-%E6%98%A5%E5%AD%A3%E7%A0%94%E7%A9%B6%E7%99%BA%E8%A1%A8%E4%BC%9A-%E5%AD%A6%E7%94%9F%E5%84%AA%E7%A7%80%E7%99%BA%E8%A1%A8%E8%B3%9E%E3%82%92%E5%8F%97%E8%B3%9E%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/"
+          />
+          <AwardCard
+            title="東京大学 工学部長賞（研究）"
+            date="2022/03"
+            description="卒業研究「咽喉マイクを用いた背景雑音に頑健な英語シャドーイング音声の自動評価」に対して授与。"
+          />
+          <AwardCard
+            title="アントレプレナーシップ・チャレンジ2020"
+            date="2020/09"
+            description="学生向けのビジネスコンテストで、学校現場における生徒のメンタルヘルスケアアプリ「Moodify」を提案し、第3位を受賞。"
           />
         </div>
       </div>

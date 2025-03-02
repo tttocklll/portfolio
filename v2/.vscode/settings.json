@@ -5,5 +5,6 @@
     "quickfix.biome": "explicit",
     "source.organizeImports.biome": "explicit"
   },
-  "files.trimTrailingWhitespace": true
+  "files.trimTrailingWhitespace": true,
+  "tailwindCSS.experimental.configFile": "styles/global.css"
 }

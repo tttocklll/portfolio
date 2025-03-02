@@ -2,7 +2,7 @@
 import { Icon } from "astro-icon/components";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-import Profile from "../components/Profile.astro";
+import ProfileCard from "../components/ProfileCard.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -11,20 +11,25 @@ import Layout from "../layouts/Layout.astro";
 
   <main>
     <!-- Hero Section -->
-    <section class="min-h-[40vh] flex flex-col items-center justify-center py-16 mt-16">
+    <section class="min-h-[20vh] flex flex-col items-center justify-center py-16 mt-16">
       <div class="text-center max-w-4xl mx-auto px-6">
-        <h1 class="text-4xl font-extralight text-accent mb-8 opacity-90">About</h1>
-        <p class="text-lg text-text/70 font-extralight max-w-2xl mx-auto">
-          静岡県出身・東京大学卒のソフトウェアエンジニア。AIや音声処理、言語、教育に特に興味を持っています。
-        </p>
+        <h1 class="text-4xl font-extralight text-accent opacity-90">About</h1>
+      </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section class="py-12">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-2xl font-extralight text-text/80 mb-16">Profile</h2>
+        <ProfileCard />
       </div>
     </section>
 
     <!-- Timeline Section -->
-    <section class="py-12 bg-white/30 backdrop-blur-sm">
+    <section class="py-12">
       <div class="max-w-4xl mx-auto px-6">
         <h2 class="text-2xl font-extralight text-text/80 mb-16">Timeline</h2>
-        
+
         <ol class="relative border-l border-accent/30">
           <li class="mb-12 ml-6">
             <span class="absolute flex items-center justify-center w-8 h-8 bg-white rounded-full -left-4 ring-8 ring-white/30 shadow-sm">
@@ -35,7 +40,6 @@ import Layout from "../layouts/Layout.astro";
                 静岡県生まれ
               </h3>
               <time class="block mb-3 text-sm font-extralight leading-none text-text/60">1999/11/02</time>
-              <p class="text-text/80 font-light">浜松市出身。幼少期から電子工作やプログラミングに興味を持つ。</p>
             </div>
           </li>
 
@@ -48,7 +52,6 @@ import Layout from "../layouts/Layout.astro";
                 静岡県立浜松北高校 入学
               </h3>
               <time class="block mb-3 text-sm font-extralight leading-none text-text/60">2015/04</time>
-              <p class="text-text/80 font-light">地元の進学校に入学。そこで様々な分野に触れる。</p>
             </div>
           </li>
 
@@ -58,7 +61,7 @@ import Layout from "../layouts/Layout.astro";
             </span>
             <div class="p-4 bg-white/60 rounded-lg shadow-sm border border-white/40 transition-all hover:shadow-md hover:border-white/60">
               <h3 class="flex items-center mb-1 text-xl font-light text-accent">
-                東京大学 教養学部 文科II類 入学
+                東京大学 教養学部 文科二類 入学
               </h3>
               <time class="block mb-3 text-sm font-extralight leading-none text-text/60">2018/04</time>
               <p class="text-text/80 font-light">当初は文系として入学するも、授業を通じてプログラミングや人工知能に強い関心を持つようになる。</p>
@@ -71,10 +74,10 @@ import Layout from "../layouts/Layout.astro";
             </span>
             <div class="p-4 bg-white/60 rounded-lg shadow-sm border border-white/40 transition-all hover:shadow-md hover:border-white/60">
               <h3 class="flex items-center mb-1 text-xl font-light text-accent">
-                東京大学 工学部 
+                東京大学 工学部
                 <a href="https://www.ee.t.u-tokyo.ac.jp/" class="text-accent hover:text-accent/70 transition-colors ml-1">
                   電子情報工学科
-                </a> 
+                </a>
                 進学
               </h3>
               <time class="block mb-3 text-sm font-extralight leading-none text-text/60">2020/04</time>
@@ -122,7 +125,7 @@ import Layout from "../layouts/Layout.astro";
               </div>
             </div>
           </li>
-          
+
           <li class="ml-6">
             <span class="absolute flex items-center justify-center w-8 h-8 bg-white rounded-full -left-4 ring-8 ring-white/30 shadow-sm">
               <div class="w-3 h-3 rounded-full bg-accent"></div>
@@ -152,7 +155,7 @@ import Layout from "../layouts/Layout.astro";
     <section class="py-24">
       <div class="max-w-4xl mx-auto px-6">
         <h2 class="text-2xl font-extralight text-text/80 mb-16">Skills</h2>
-        
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Programming Languages -->
           <div class="bg-gradient-to-br from-white/40 to-background/90 rounded-xl overflow-hidden backdrop-blur-[2px] border border-white/15 shadow-sm transition-all hover:shadow-md hover:border-white/25">
@@ -185,7 +188,7 @@ import Layout from "../layouts/Layout.astro";
               </ul>
             </div>
           </div>
-          
+
           <!-- Web Technologies -->
           <div class="bg-gradient-to-br from-white/40 to-background/90 rounded-xl overflow-hidden backdrop-blur-[2px] border border-white/15 shadow-sm transition-all hover:shadow-md hover:border-white/25">
             <div class="p-6">
@@ -217,7 +220,7 @@ import Layout from "../layouts/Layout.astro";
               </ul>
             </div>
           </div>
-          
+
           <!-- Tools & Platforms -->
           <div class="bg-gradient-to-br from-white/40 to-background/90 rounded-xl overflow-hidden backdrop-blur-[2px] border border-white/15 shadow-sm transition-all hover:shadow-md hover:border-white/25">
             <div class="p-6">
@@ -254,7 +257,7 @@ import Layout from "../layouts/Layout.astro";
     </section>
 
     <!-- Awards Section -->
-    <section class="py-24 bg-white/30 backdrop-blur-sm">
+    <section class="py-24">
       <div class="max-w-4xl mx-auto px-6">
         <h2 class="text-2xl font-extralight text-text/80 mb-16">Awards</h2>
 
@@ -272,7 +275,7 @@ import Layout from "../layouts/Layout.astro";
               </p>
             </div>
           </div>
-          
+
           <!-- Award Card 2 -->
           <div class="bg-gradient-to-br from-white/40 to-background/90 rounded-xl overflow-hidden backdrop-blur-[2px] border border-white/15 shadow-sm hover:shadow-md transition-all">
             <div class="p-6">
@@ -286,7 +289,7 @@ import Layout from "../layouts/Layout.astro";
               </p>
             </div>
           </div>
-          
+
           <!-- Award Card 3 -->
           <div class="bg-gradient-to-br from-white/40 to-background/90 rounded-xl overflow-hidden backdrop-blur-[2px] border border-white/15 shadow-sm hover:shadow-md transition-all">
             <div class="p-6">
@@ -306,9 +309,6 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
     </section>
-
-    <!-- Profile Section -->
-    <Profile />
   </main>
 
   <Footer />
@@ -319,7 +319,7 @@ import Layout from "../layouts/Layout.astro";
   .timeline-item {
     transition: all 0.3s ease;
   }
-  
+
   .timeline-item:hover {
     transform: translateX(5px);
   }

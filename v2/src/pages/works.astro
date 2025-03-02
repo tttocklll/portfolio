@@ -12,6 +12,7 @@ const projects = [
       "学校現場における、生徒のメンタルを管理する web アプリ。アントレプレナーシップ・チャレンジ2020にて第3位受賞。",
     image: "/imgs/Moodify.png",
     href: "https://github.com/tttocklll/Moodify",
+    tags: ["JavaScript", "React", "Firebase", "MUI"]
   },
   {
     title: "さいほんやくくん",
@@ -19,6 +20,7 @@ const projects = [
       "日本語 → 英語 → ... → 日本語 のように、複数の言語に翻訳した後、最初の言語に戻す「再翻訳」のアプリ",
     image: "/imgs/retranslate.png",
     href: "https://retranslate.tttocklll.dev/",
+    tags: ["TypeScript", "Next.js", "DeepL API", "Vercel"]
   },
   {
     title: "2021年度工学部研究成果発表会 & 五月祭",
@@ -26,6 +28,7 @@ const projects = [
       "大学の学園祭にて、学科として出展。VTuber企画では、VTuber「みつえれ」のトラッキングおよびアニメーションを実装。またWebページ制作も一部担当した。",
     image: "/imgs/mayfes.png",
     href: "https://2021.eeic.jp/",
+    tags: ["HTML/CSS", "JavaScript", "three.js", "face-api.js"]
   },
   {
     title: "カイルくん",
@@ -33,6 +36,7 @@ const projects = [
       "社内の配送業務およびCS業務を効率化・簡易化するためのSlack Botを制作。株式会社Stroboにて現在も活躍中！",
     image: "/imgs/kairu.png",
     href: "https://note.com/strobo_inc/n/n506e23a29c3f",
+    tags: ["Node.js", "Slack API", "AWS Lambda", "DynamoDB"]
   },
   {
     title: "ぐぐるンです",
@@ -40,12 +44,14 @@ const projects = [
       "文字だけのメニューに画像を載せて、わかりやすいものにするアプリ。文字の読み取り精度を上げ、かつ出力動画のfpsをなるべく落とさないように工夫した。※ 2020年度 OpenCV/GL 実験にて作成",
     image: "/imgs/menu_reader.png",
     href: "https://github.com/tttocklll/menu_reader",
+    tags: ["Python", "OpenCV", "OCR", "Computer Vision"]
   },
   {
     title: "Parkize",
     description: "イベント会場における、関係車両の入出庫を管理するWebアプリ",
     image: "/imgs/parkize.png",
     href: "#",
+    tags: ["PHP", "MySQL", "Bootstrap", "jQuery"]
   },
 ];
 ---
@@ -71,6 +77,7 @@ const projects = [
               description={project.description}
               image={project.image}
               href={project.href}
+              tags={project.tags}
             />
           ))}
         </div>

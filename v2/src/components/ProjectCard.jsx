@@ -1,4 +1,4 @@
-export default function ProjectCard({ title, description, image, href }) {
+export default function ProjectCard({ title, description, image, href, tags = [] }) {
   return (
     <div className="flex flex-col h-full bg-card-bg rounded-xl overflow-hidden hover:shadow-md transition-shadow duration-300">
       <div className="relative aspect-video bg-background flex items-center justify-center overflow-hidden">
@@ -21,6 +21,19 @@ export default function ProjectCard({ title, description, image, href }) {
         </a>
 
         <div className="mt-3 text-text/80 flex-grow">{description}</div>
+
+        {tags.length > 0 && (
+          <div className="mt-4 flex flex-wrap gap-2">
+            {tags.map((tag, index) => (
+              <span 
+                key={index} 
+                className="px-2 py-1 text-xs rounded-md bg-accent/10 text-accent/80"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
 
         <div className="mt-4">
           <a

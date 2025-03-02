@@ -6,7 +6,7 @@ const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
-<header class="fixed top-0 left-0 right-0 z-50 py-4 px-6 md:px-12 lg:px-16 bg-background/90 backdrop-blur-sm shadow-sm">
+<header class="fixed top-0 left-0 right-0 z-50 py-4 px-6 md:px-12 lg:px-16 md:bg-background/90 md:backdrop-blur-sm md:shadow-sm">
   <div class="max-w-screen-xl mx-auto flex justify-center items-center">
     <div class="md:hidden absolute left-6">
       <button id="menu-toggle" class="text-text/70 hover:text-accent transition-colors">

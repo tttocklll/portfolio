@@ -1,0 +1,27 @@
+---
+import { Icon } from "astro-icon/components";
+import KeywordTag from "./KeywordTag.astro";
+
+interface KeywordItem {
+  icon: string;
+  text: string;
+}
+
+interface Props {
+  keywords: KeywordItem[];
+}
+
+const { keywords } = Astro.props;
+---
+
+<div>
+  <p class="text-base text-text/70 font-extralight flex items-center mb-3">
+    <Icon name="mdi:star" class="w-4 h-4 text-accent/60 mr-2" />
+    興味のキーワード:
+  </p>
+  <div class="flex flex-wrap gap-2 ml-6">
+    {keywords.map((keyword) => (
+      <KeywordTag icon={keyword.icon} text={keyword.text} />
+    ))}
+  </div>
+</div>

@@ -1,39 +1,77 @@
 ---
 import profileIcon from "../assets/profile_icon.jpg";
+import KeywordsSection from "./KeywordsSection.astro";
+import ProfileBio from "./ProfileBio.astro";
 import SocialIcons from "./SocialIcons";
+// Define bio entries
+const bioEntries = [
+  "静岡県浜松市出身。浜松北高卒業後。",
+  "東京大学文科二類に入学後 IT に興味を持ち、理転し工学部電子情報工学科に進学。工学部長賞受賞。",
+  "Microsoft, FLYWHEEL でエンジニアを経験後、picon に入社。",
+  "新規事業を中心にフロントエンドやバックエンド、機械学習まで幅広く担当。",
+];
+
+// Define keywords
+const keywords = [
+  { icon: "mdi:brain", text: "AI" },
+  { icon: "mdi:music", text: "音" },
+  { icon: "mdi:language", text: "言語" },
+  { icon: "mdi:school", text: "教育" },
+  { icon: "mdi:human-greeting-proximity", text: "つながり" },
+];
 ---
 <section class="w-full py-32" id="profile">
-  <div class="max-w-4xl mx-auto">
+  <div class="max-w-4xl mx-auto px-6">
     <h2 class="text-2xl font-extralight text-text/80 mb-16">Profile</h2>
 
-    <div class="bg-white/50 rounded-xl overflow-hidden backdrop-blur-sm shadow-sm">
+    <div class="bg-gradient-to-br from-white/30 to-background/90 rounded-xl overflow-hidden backdrop-blur-[2px] border border-white/15 shadow-sm transition-all hover:shadow-md hover:border-white/25">
       <div class="md:flex">
-        <div class="md:w-1/3 p-12 flex flex-col items-center justify-center">
-          <img
-            src={profileIcon.src}
-            alt="Profile icon"
-            class="w-36 h-36 rounded-full object-cover border border-accent/20"
-          />
+        <div class="md:w-1/3 p-10 flex flex-col items-center justify-center bg-gradient-to-b from-white/20 to-transparent">
+          <div class="relative">
+            <img
+              src={profileIcon.src}
+              alt="Profile icon"
+              class="w-36 h-36 rounded-full object-cover border-2 border-accent/10 shadow-md"
+            />
+            <div class="absolute inset-0 rounded-full border-2 border-accent/5 transform scale-110 animate-pulse"></div>
+          </div>
 
           <div class="mt-8 text-center">
-            <h3 class="text-2xl font-extralight text-accent">大村 瞬也</h3>
-            <p class="text-text/40 mb-6 font-extralight">OHMURA Tokiya</p>
+            <h3 class="text-2xl font-light text-accent mb-1">大村 瞬也</h3>
+            <p class="text-text/40 font-extralight tracking-wide">OHMURA Tokiya</p>
+            <p class="text-text/40 text-sm mb-6 font-extralight tracking-wide">Senior Software Engineer / picon inc.</p>
 
             <SocialIcons client:load />
           </div>
         </div>
 
-        <div class="md:w-2/3 p-12">
-          <div class="prose max-w-none">
-            <p class="text-lg mb-6 text-text/60 font-extralight">静岡県浜松市出身。</p>
-            <p class="text-lg mb-6 text-text/60 font-extralight">浜松北高卒業後、東京大学文科II類に入学。</p>
-            <p class="text-lg mb-6 text-text/60 font-extralight">アルバイト先の経験からITに興味を持ち、理転し工学部電子情報工学科に進学。</p>
-            <p class="text-lg mb-6 text-text/60 font-extralight">株式会社Stroboでエンジニアインターン。</p>
-            <p class="text-lg mb-6 text-text/60 font-extralight">大学卒業後、日本マイクロソフト株式会社に入社。</p>
-            <p class="text-lg text-text/60 font-extralight">興味のキーワード: <span class="font-light text-accent/80">「教育」「効率化」「音」</span></p>
+        <div class="md:w-2/3 p-10 md:p-12 flex flex-col">
+          <div class="prose max-w-none flex-grow">
+            {bioEntries.map((entry) => (
+              <ProfileBio text={entry} />
+            ))}
+          </div>
+
+          <div class="mt-4 pt-4 border-t border-accent/5">
+            <KeywordsSection keywords={keywords} />
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  .animate-pulse {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+</style>

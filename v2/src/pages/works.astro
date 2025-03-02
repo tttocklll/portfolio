@@ -4,13 +4,20 @@ import Header from "../components/Header.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import Layout from "../layouts/Layout.astro";
 
+import Moodify from "../assets/Moodify.png";
+import Kairu from "../assets/kairu.png";
+import Mayfes from "../assets/mayfes.png";
+import MenuReader from "../assets/menu_reader.png";
+import Parkize from "../assets/parkize.png";
+import Retranslate from "../assets/retranslate.png";
+
 // Define projects data
 const projects = [
   {
     title: "Moodify",
     description:
       "学校現場における、生徒のメンタルを管理する web アプリ。アントレプレナーシップ・チャレンジ2020にて第3位受賞。",
-    image: "/imgs/Moodify.png",
+    image: Moodify,
     href: "https://github.com/tttocklll/Moodify",
     tags: ["JavaScript", "React", "Firebase", "MUI"],
     year: "2020",
@@ -19,7 +26,7 @@ const projects = [
     title: "さいほんやくくん",
     description:
       "日本語 → 英語 → ... → 日本語 のように、複数の言語に翻訳した後、最初の言語に戻す「再翻訳」のアプリ",
-    image: "/imgs/retranslate.png",
+    image: Retranslate,
     href: "https://retranslate.tttocklll.dev/",
     tags: ["TypeScript", "Next.js", "DeepL API", "Vercel"],
     year: "2022",
@@ -28,7 +35,7 @@ const projects = [
     title: "2021年度工学部研究成果発表会 & 五月祭",
     description:
       "大学の学園祭にて、学科として出展。VTuber企画では、VTuber「みつえれ」のトラッキングおよびアニメーションを実装。またWebページ制作も一部担当した。",
-    image: "/imgs/mayfes.png",
+    image: Mayfes,
     href: "https://2021.eeic.jp/",
     tags: ["HTML/CSS", "JavaScript", "three.js", "face-api.js"],
     year: "2021",
@@ -37,7 +44,7 @@ const projects = [
     title: "カイルくん",
     description:
       "社内の配送業務およびCS業務を効率化・簡易化するためのSlack Botを制作。株式会社Stroboにて現在も活躍中！",
-    image: "/imgs/kairu.png",
+    image: Kairu,
     href: "https://note.com/strobo_inc/n/n506e23a29c3f",
     tags: ["Node.js", "Slack API", "AWS Lambda", "DynamoDB"],
     year: "2021",
@@ -46,7 +53,7 @@ const projects = [
     title: "ぐぐるンです",
     description:
       "文字だけのメニューに画像を載せて、わかりやすいものにするアプリ。文字の読み取り精度を上げ、かつ出力動画のfpsをなるべく落とさないように工夫した。※ 2020年度 OpenCV/GL 実験にて作成",
-    image: "/imgs/menu_reader.png",
+    image: MenuReader,
     href: "https://github.com/tttocklll/menu_reader",
     tags: ["Python", "OpenCV", "OCR", "Computer Vision"],
     year: "2020",
@@ -54,7 +61,7 @@ const projects = [
   {
     title: "Parkize",
     description: "イベント会場における、関係車両の入出庫を管理するWebアプリ",
-    image: "/imgs/parkize.png",
+    image: Parkize,
     href: "#",
     tags: ["PHP", "MySQL", "Bootstrap", "jQuery"],
     year: "2019",
@@ -128,12 +135,12 @@ const projects = [
 
   /* Grid pattern background */
   .bg-grid-pattern {
-    background-image: 
+    background-image:
       linear-gradient(to right, var(--color-accent-muted) 1px, transparent 1px),
       linear-gradient(to bottom, var(--color-accent-muted) 1px, transparent 1px);
     background-size: 20px 20px;
   }
-  
+
   /* View Project link hover animation */
   :global(.text-accent.hover\:underline) {
     position: relative;
@@ -155,13 +162,13 @@ const projects = [
   :global(.text-accent.hover\:underline:hover)::after {
     width: 100%;
   }
-  
+
   /* Enhanced hover effect for project cards */
   :global(.bg-card-bg) {
     transform: translateY(0);
     transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.5s cubic-bezier(0.23, 1, 0.32, 1), border 0.3s ease;
   }
-  
+
   :global(.bg-card-bg:hover) {
     transform: translateY(-8px);
   }
@@ -170,7 +177,7 @@ const projects = [
   section {
     position: relative;
   }
-  
+
   section::after {
     content: '';
     position: absolute;
@@ -181,30 +188,30 @@ const projects = [
     opacity: 0.1;
     bottom: 0;
   }
-  
+
   /* Mobile-specific styles */
   @media (max-width: 768px) {
     h1.text-4xl {
       font-size: 2rem;
     }
-    
+
     /* Adjust tag sizes for mobile */
     :global(.px-2.py-1.text-xs) {
       padding: 0.15rem 0.5rem;
       font-size: 0.65rem;
     }
-    
+
     :global(.flex-wrap.gap-2) {
       gap: 0.375rem;
     }
-    
+
     /* Center content on mobile */
     .projects-grid {
       justify-items: center;
       max-width: 450px;
       margin: 0 auto;
     }
-    
+
     /* Adjust spacing between sections */
     section {
       padding-top: 2rem;

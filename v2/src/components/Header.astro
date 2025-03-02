@@ -7,14 +7,17 @@ const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50 py-4 px-6 md:px-12 lg:px-16 bg-background/90 backdrop-blur-sm shadow-sm">
-  <div class="max-w-screen-xl mx-auto flex justify-between items-center">
-    <div>
+  <div class="max-w-screen-xl mx-auto flex justify-center items-center">
+    <div class="md:hidden absolute left-6">
+      <button id="menu-toggle" class="text-text/70 hover:text-accent transition-colors">
+        <Icon name="mdi:menu" class="h-6 w-6" />
+      </button>
+    </div>
+    
+    <nav class="hidden md:flex space-x-8 lg:space-x-16">
       <a href="/" class={`text-sm uppercase tracking-widest font-extralight transition-colors ${currentPath === "" ? "text-accent border-b-2 border-accent" : "text-text/70 hover:text-accent"}`}>
         Home
       </a>
-    </div>
-
-    <nav class="hidden md:flex space-x-6 lg:space-x-12">
       <a href="/about" class={`text-sm uppercase tracking-widest font-extralight transition-colors ${currentPath === "about" ? "text-accent border-b-2 border-accent" : "text-text/70 hover:text-accent"}`}>
         About
       </a>
@@ -23,11 +26,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
       </a>
     </nav>
 
-    <div class="md:hidden">
-      <button id="menu-toggle" class="text-text/70 hover:text-accent transition-colors">
-        <Icon name="mdi:menu" class="h-6 w-6" />
-      </button>
-    </div>
+
   </div>
 
   <!-- Mobile menu -->

@@ -1,15 +1,20 @@
+import react from "@astrojs/react";
+import vercelStatic from "@astrojs/vercel/static";
+import tailwindcss from "@tailwindcss/vite";
+import favicons from "astro-favicons";
+import icon from "astro-icon";
 // @ts-check
 import { defineConfig } from "astro/config";
 
-import react from "@astrojs/react";
-import tailwindcss from "@tailwindcss/vite";
-
-import icon from "astro-icon";
-
-import favicons from "astro-favicons";
-
 // https://astro.build/config
 export default defineConfig({
+  output: "static",
+  adapter: vercelStatic({
+    webAnalytics: {
+      enabled: true,
+    },
+    imageService: true,
+  }),
   integrations: [
     react(),
     icon(),

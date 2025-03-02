@@ -113,7 +113,7 @@ const projects = [
   /* Add a subtle fade-in animation for projects */
   .projects-grid > div {
     opacity: 0;
-    animation: fadeIn 0.5s ease forwards;
+    animation: fadeIn 0.8s ease-out forwards;
   }
 
   .projects-grid > div:nth-child(1) { animation-delay: 0.1s; }
@@ -124,8 +124,8 @@ const projects = [
   .projects-grid > div:nth-child(6) { animation-delay: 0.6s; }
 
   @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
   }
 
   /* Grid pattern background */
@@ -136,15 +136,36 @@ const projects = [
     background-size: 20px 20px;
   }
   
-  /* Card hover effect */
-  :global(.bg-card-bg) {
+  /* View Project link hover animation */
+  :global(.text-accent.hover\:underline) {
+    position: relative;
+    text-decoration: none !important;
     transition: all 0.3s ease;
-    border: 1px solid transparent;
+  }
+
+  :global(.text-accent.hover\:underline)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--color-accent);
+    transition: width 0.3s ease;
+  }
+
+  :global(.text-accent.hover\:underline:hover)::after {
+    width: 100%;
+  }
+  
+  /* Enhanced hover effect for project cards */
+  :global(.bg-card-bg) {
+    transform: translateY(0);
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.5s cubic-bezier(0.23, 1, 0.32, 1), border 0.3s ease;
   }
   
   :global(.bg-card-bg:hover) {
-    border: 1px solid var(--color-accent-muted);
-    box-shadow: 0 4px 20px -5px rgba(var(--color-accent-rgb), 0.15);
+    transform: translateY(-8px);
   }
 
   /* Section subtle decoration */

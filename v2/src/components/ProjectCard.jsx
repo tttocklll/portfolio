@@ -5,7 +5,7 @@ export default function ProjectCard({ title, description, image, href, tags = []
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+          className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
         />
       </div>
 
@@ -13,9 +13,10 @@ export default function ProjectCard({ title, description, image, href, tags = []
         <a
           href={href}
           target={href.startsWith("http") ? "_blank" : undefined}
+          rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
           className="group"
         >
-          <h3 className="text-xl font-semibold text-accent group-hover:text-accent/80 transition-colors flex items-center">
+          <h3 className="text-xl font-semibold text-accent group-hover:text-accent/80 transition-colors duration-300 flex items-center">
             {title}
             {year && <span className="ml-2 text-sm text-text/60 font-normal">{year}</span>}
           </h3>

@@ -1,0 +1,62 @@
+---
+export interface Props {
+  title: string;
+  startDate: string;
+  endDate?: string;
+  isLast?: boolean;
+  links?: Array<{
+    href: string;
+    text: string;
+  }>;
+  details?: Array<{
+    icon: string;
+    content: string;
+    isLink?: boolean;
+    href?: string;
+  }>;
+}
+
+const {
+  title,
+  startDate,
+  endDate,
+  isLast = false,
+  links = [],
+  details = [],
+} = Astro.props;
+import { Icon } from "astro-icon/components";
+---
+
+<li class={`${isLast ? "" : "mb-12"} ml-6`}>
+  <span class="absolute flex items-center justify-center w-8 h-8 bg-white rounded-full -left-4 ring-8 ring-white/30 shadow-sm">
+    <div class="w-3 h-3 rounded-full bg-accent"></div>
+  </span>
+  <div class="p-4 rounded-lg card-bg">
+    <h3 class="flex items-center mb-1 text-xl font-light text-accent">
+      {title}
+      {links.map((link) => (
+        <a href={link.href} class="text-accent hover:text-accent/70 transition-colors ml-1">
+          {link.text}
+        </a>
+      ))}
+    </h3>
+    <time class="block mb-3 text-sm font-extralight leading-none text-text/60">{startDate} - {endDate && endDate}</time>
+
+    {details.length > 0 && (
+      <div class="space-y-2 text-text/80 font-light">
+        {details.map((detail) => (
+          <p>
+            <Icon name={detail.icon} class="inline-block w-4 h-4 mr-1 text-accent/70" />
+            {detail.isLink ? (
+              <a href={detail.href} class="text-accent hover:text-accent/70 transition-colors">
+                {detail.content}
+              </a>
+            ) : (
+              <Fragment set:html={detail.content} />
+            )}
+          </p>
+        ))}
+      </div>
+    )}
+  </div>
+</li>

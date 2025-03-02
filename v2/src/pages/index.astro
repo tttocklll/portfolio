@@ -11,7 +11,7 @@ import Layout from "../layouts/Layout.astro";
 
 	<main>
 		<!-- Hero Section - Full viewport height with just the name -->
-		<section class="h-screen flex flex-col items-center justify-center relative">
+		<section class="h-screen flex flex-col items-center justify-center">
 			<div class="text-center">
 				<img
 					src={tttocklllLogo.src}
@@ -19,12 +19,12 @@ import Layout from "../layouts/Layout.astro";
 					class="h-64"
 				/>
 			</div>
-			
-			<!-- Enhanced Scroll Indicator -->
-			<div class="absolute bottom-8 left-0 right-0 flex flex-col items-center">
-				<span class="text-text/30 text-xs font-extralight mb-2">SCROLL</span>
-				<div class="scroll-indicator-line">
-					<div class="scroll-indicator-dot"></div>
+
+			<!-- Simple scroll text positioned above the animated line -->
+			<div class="scroll-indicator">
+				<span class="scroll-text">scroll</span>
+				<div class="scroll-line">
+					<div class="scroll-dot"></div>
 				</div>
 			</div>
 		</section>
@@ -37,29 +37,54 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style>
-	/* Enhanced scroll indicator */
-	@keyframes scrollDown {
-		0% { transform: translateY(0); opacity: 1; }
-		100% { transform: translateY(20px); opacity: 0; }
+	/* Scroll indicator styling */
+	.scroll-indicator {
+		position: absolute;
+		bottom: 2rem;
+		left: 0;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.5rem;
 	}
 
-	.scroll-indicator-line {
+	.scroll-text {
+		font-size: 0.75rem;
+		text-transform: lowercase;
+		letter-spacing: 0.1rem;
+		color: var(--color-text);
+		opacity: 0.3;
+		font-weight: 200;
+	}
+
+	.scroll-line {
 		position: relative;
 		width: 1px;
-		height: 40px;
+		height: 3rem;
 		background-color: var(--color-accent);
 		opacity: 0.4;
 	}
 
-	.scroll-indicator-dot {
+	.scroll-dot {
 		position: absolute;
 		top: 0;
 		left: 0;
-		transform: translateX(-50%);
-		width: 5px;
-		height: 5px;
+		width: 3px;
+		height: 3px;
 		background-color: var(--color-accent);
 		border-radius: 50%;
-		animation: scrollDown 1.8s infinite ease-out;
+		animation: scrollDown 1.5s infinite ease-in-out;
+	}
+
+	@keyframes scrollDown {
+		0% {
+			transform: translate(-1px, 0);
+			opacity: 1;
+		}
+		100% {
+			transform: translate(-1px, 3rem);
+			opacity: 0;
+		}
 	}
 </style>

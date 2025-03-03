@@ -12,30 +12,30 @@ const { title, description, image, href, tags = [], year } = Astro.props;
     />
   </div>
 
-  <div class="p-6 flex flex-col flex-grow">
+  <div class="card-padding flex flex-col flex-grow">
     {href ? (
-      <h3 class="text-xl text-accent group-hover:text-accent/80 transition-colors duration-300 flex flex-wrap items-center">
+      <h3 class="text-responsive-lg text-accent group-hover:text-accent/80 transition-colors duration-300 flex flex-wrap items-center">
         <a href={href} target="_blank" rel="noopener noreferrer" class="hover:underline items-center">
           {title}
-          <Icon name="mdi:open-in-new" class="inline-block w-4 h-4" />
+          <Icon name="mdi:open-in-new" class="inline-block icon-responsive-base" />
         </a>
       </h3>
     ) : (
-      <h3 class="text-xl text-accent group-hover:text-accent/80 transition-colors duration-300 flex flex-wrap items-center">
+      <h3 class="text-responsive-lg text-accent group-hover:text-accent/80 transition-colors duration-300 flex flex-wrap items-center">
         {title}
       </h3>
     )}
     {year && (
-      <span class="text-sm text-text/60 font-normal">{year}</span>
+      <span class="text-responsive-sm text-text/60 font-normal">{year}</span>
     )}
 
-    <div class="mt-3 text-text/80 flex-grow">{description}</div>
+    <div class="mt-2 sm:mt-3 text-responsive-base text-text/80 flex-grow">{description}</div>
 
     {tags.length > 0 && (
-      <div class="mt-4 flex flex-wrap gap-2">
+      <div class="mt-3 sm:mt-4 flex flex-wrap gap-responsive-sm">
         {tags.map((tag) => (
           <span
-            class="px-2 py-1 text-xs rounded-md bg-accent/10 text-accent/80 inline-block"
+            class="px-1.5 sm:px-2 py-0.5 sm:py-1 text-xs rounded-md bg-accent/10 text-accent/80 inline-block"
           >
             {tag}
           </span>

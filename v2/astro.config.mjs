@@ -1,5 +1,5 @@
 import react from "@astrojs/react";
-import vercelStatic from "@astrojs/vercel/static";
+import vercelStatic from "@astrojs/vercel";
 import tailwindcss from "@tailwindcss/vite";
 import favicons from "astro-favicons";
 import icon from "astro-icon";

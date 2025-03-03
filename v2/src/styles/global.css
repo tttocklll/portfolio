@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./utilities/responsive.css";
 
 @theme {
   --color-background: #f4f5f7;

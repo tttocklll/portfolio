@@ -27,12 +27,12 @@ const {
 import { Icon } from "astro-icon/components";
 ---
 
-<li class={`${isLast ? "" : "mb-8 sm:mb-12"} ml-4 sm:ml-6`}>
-  <span class="absolute flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 bg-white rounded-full -left-3 sm:-left-4 ring-4 sm:ring-8 ring-white/30 shadow-sm">
+<li class={`${isLast ? "" : "mb-8 sm:mb-12"} timeline-item-margin`}>
+  <span class="absolute flex items-center justify-center timeline-circle bg-white rounded-full ring-4 sm:ring-8 ring-white/30 shadow-sm">
     <div class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-accent"></div>
   </span>
-  <div class="p-3 sm:p-4 rounded-lg card-bg">
-    <h3 class="flex items-center mb-1 text-base sm:text-xl font-light text-accent">
+  <div class="card-padding rounded-lg card-bg">
+    <h3 class="flex items-center mb-1 text-responsive-lg font-light text-accent">
       {title}
       {links.map((link) => (
         <a href={link.href} class="text-accent hover:text-accent/70 transition-colors ml-1">
@@ -40,13 +40,13 @@ import { Icon } from "astro-icon/components";
         </a>
       ))}
     </h3>
-    <time class="block mb-2 sm:mb-3 text-xs sm:text-sm font-extralight leading-none text-text/60">{startDate} - {endDate && endDate}</time>
+    <time class="block mb-2 sm:mb-3 text-responsive-sm font-extralight leading-none text-text/60">{startDate} - {endDate && endDate}</time>
 
     {details.length > 0 && (
-      <div class="space-y-1.5 sm:space-y-2 text-sm sm:text-base text-text/80 font-light">
+      <div class="space-y-1.5 sm:space-y-2 text-responsive-base text-text/80 font-light">
         {details.map((detail) => (
           <p>
-            <Icon name={detail.icon} class="inline-block w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1 text-accent/70" />
+            <Icon name={detail.icon} class="inline-block icon-responsive-base mr-1 text-accent/70" />
             {detail.isLink ? (
               <a href={detail.href} class="text-accent hover:text-accent/70 transition-colors">
                 {detail.content}

@@ -10,16 +10,16 @@ import { Icon } from "astro-icon/components";
 ---
 
 <div class="card-bg">
-  <div class="p-4 sm:p-6">
+  <div class="card-padding">
     <div class="flex items-center mb-3 sm:mb-4">
-      <Icon name={icon} class="w-5 h-5 sm:w-6 sm:h-6 text-accent mr-2 sm:mr-3" />
-      <h3 class="text-lg sm:text-xl font-light text-text">{title}</h3>
+      <Icon name={icon} class="icon-responsive-lg text-accent mr-2 sm:mr-3" />
+      <h3 class="text-responsive-lg font-light text-text">{title}</h3>
     </div>
     <ul class="space-y-2 sm:space-y-3">
       {skills.map((skill) => (
         <li class="flex items-center">
           <div class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-accent/60 rounded-full mr-1.5 sm:mr-2"></div>
-          <span class="text-sm sm:text-base text-text/80 font-extralight">{skill}</span>
+          <span class="text-responsive-base text-text/80 font-extralight">{skill}</span>
         </li>
       ))}
     </ul>

@@ -1,22 +1,22 @@
 /* Responsive Typography */
 .text-responsive-sm {
-  @apply text-xs sm:text-sm;
+  @apply text-[0.7rem] sm:text-sm;
 }
 
 .text-responsive-base {
-  @apply text-sm sm:text-base;
+  @apply text-[0.8rem] sm:text-base;
 }
 
 .text-responsive-lg {
-  @apply text-base sm:text-lg md:text-xl;
+  @apply text-[0.9rem] sm:text-lg md:text-xl;
 }
 
 .text-responsive-xl {
-  @apply text-lg sm:text-xl md:text-2xl;
+  @apply text-base sm:text-xl md:text-2xl;
 }
 
 .text-responsive-2xl {
-  @apply text-xl sm:text-2xl md:text-3xl;
+  @apply text-lg sm:text-2xl md:text-3xl;
 }
 
 /* Responsive Icon Sizes */
@@ -86,9 +86,34 @@
 .mb-responsive-base {
   @apply mb-3 sm:mb-4 md:mb-6;
 }
+.mb-responsive-sm {
+  @apply mb-2 sm:mb-3 md:mb-4;
+}
+
+.mb-responsive-base {
+  @apply mb-3 sm:mb-4 md:mb-6;
+}
+
+.mb-responsive-lg {
+  @apply mb-8 sm:mb-12 md:mb-16;
+}
+
+.ml-responsive-sm {
+  @apply ml-2 sm:ml-3 md:ml-4;
+}
+
+/* Grid gaps */
+.gap-responsive-grid {
+  @apply gap-4 sm:gap-6 md:gap-8;
+}
+}
 
 .ml-responsive-base {
   @apply ml-3 sm:ml-4 md:ml-6;
+}
+
+.mr-responsive-sm {
+  @apply mr-2 sm:mr-3 md:mr-4;
 }
 
 .mr-responsive-base {
@@ -97,7 +122,7 @@
 
 /* Timeline specific */
 .timeline-item-margin {
-  @apply ml-4 sm:ml-6 md:ml-0;
+  @apply ml-6 sm:ml-4 md:ml-0;
 }
 
 .timeline-circle {

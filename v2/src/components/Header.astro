@@ -34,18 +34,18 @@ const currentPath = pathname.slice(1); // remove the first "/"
   <div id="mobile-menu" class="hidden fixed inset-0 md:hidden bg-background/95 backdrop-blur-md z-50 flex flex-col">
     <div class="fixed bottom-6 right-6 z-[51]">
       <button id="close-menu" class="border-2 border-accent text-accent hover:bg-accent/10 rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center shadow-lg transition-colors bg-background">
-        <Icon name="mdi:close" class="h-5 w-5 sm:h-6 sm:w-6" />
+        <Icon name="mdi:close" class="icon-responsive-lg" />
       </button>
     </div>
     <div class="flex-1 flex items-center justify-center">
       <div class="px-6 py-6 sm:py-8 flex flex-col space-y-6 sm:space-y-8 text-center">
-      <a href="/" class={`text-lg sm:text-xl font-extralight transition-colors ${currentPath === "" ? "text-accent" : "text-text/70 hover:text-accent"}`}>
+      <a href="/" class={`text-responsive-lg font-extralight transition-colors ${currentPath === "" ? "text-accent" : "text-text/70 hover:text-accent"}`}>
         Home
       </a>
-      <a href="/about" class={`text-lg sm:text-xl font-extralight transition-colors ${currentPath === "about" ? "text-accent" : "text-text/70 hover:text-accent"}`}>
+      <a href="/about" class={`text-responsive-lg font-extralight transition-colors ${currentPath === "about" ? "text-accent" : "text-text/70 hover:text-accent"}`}>
         About
       </a>
-      <a href="/works" class={`text-lg sm:text-xl font-extralight transition-colors ${currentPath === "works" ? "text-accent" : "text-text/70 hover:text-accent"}`}>
+      <a href="/works" class={`text-responsive-lg font-extralight transition-colors ${currentPath === "works" ? "text-accent" : "text-text/70 hover:text-accent"}`}>
         Works
       </a>
       </div>

@@ -9,6 +9,7 @@ interface Props {
 }
 
 const { title = "tttocklll's Portfolio" } = Astro.props;
+const googleAdsenseId = import.meta.env.PUBLIC_GOOGLE_ADSENSE_ID;
 ---
 
 <!doctype html>
@@ -23,6 +24,15 @@ const { title = "tttocklll's Portfolio" } = Astro.props;
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 		<meta name="description" content="Tokiya Ohmura's personal portfolio website showcasing projects, experiences, and skills.">
+		<!-- Google AdSense -->
+		{googleAdsenseId && (
+			<script
+				is:inline
+				async
+				src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${googleAdsenseId}`}
+				crossorigin="anonymous"
+			></script>
+		)}
 	</head>
 	<body class="min-h-screen bg-background text-main">
 		<SpeedInsights />

@@ -3,6 +3,9 @@
   "extends": [
     "config:best-practices"
   ],
+  "includePaths": [
+    "v2/**"
+  ],
   "minimumReleaseAge": "7 days",
   "packageRules": [
     {

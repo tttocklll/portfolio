@@ -1,11 +1,12 @@
 ---
+import { Icon } from "astro-icon/components";
+
 interface Props {
   icon: string;
   text: string;
 }
 
 const { icon, text } = Astro.props;
-import { Icon } from "astro-icon/components";
 ---
 
 <div class="flex items-center bg-white/40 rounded-full px-2 py-1 sm:px-3 sm:py-1.5 shadow-sm backdrop-blur-[1px] border border-white/15 hover:bg-white/50 hover:border-white/25 transition-all">

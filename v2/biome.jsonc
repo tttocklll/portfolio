@@ -26,6 +26,14 @@
       }
     }
   },
+  "assist": {
+    "enabled": true,
+    "rules": {
+      "source": {
+        "organizeImports": "warn"
+      }
+    }
+  },
   "javascript": {
     "formatter": {
       "quoteStyle": "double"

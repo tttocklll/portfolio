@@ -9,7 +9,7 @@
     "astro": "astro",
     "biome:check": "biome check --write ./",
     "biome:format": "biome format --write ./",
-    "lint": "biome check ./",
+    "lint": "biome check --diagnostic-level=error ./",
     "ci": "npm run lint && npm run build"
   },
   "dependencies": {

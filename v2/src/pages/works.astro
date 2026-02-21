@@ -1,134 +1,36 @@
 ---
 import ProjectCard from "../components/ProjectCard.astro";
 import Layout from "../layouts/Layout.astro";
-
-import Moodify from "../assets/Moodify.png";
-import AiChatkun from "../assets/ai_chatkun.jpeg";
-import Kairu from "../assets/kairu.png";
-import Mayfes from "../assets/mayfes.png";
-import MenuReader from "../assets/menu_reader.png";
-import Mitsuele from "../assets/mitsuele.png";
-import Parkize from "../assets/parkize.png";
-import Retranslate from "../assets/retranslate.png";
-
-// Define projects data
-const projects = [
-  {
-    title: "AIチャットくん",
-    description:
-      "[株式会社picon] メッセージを送信すると、AIが応答を生成する LINE Bot。バックエンドおよび課金 LP を担当。友だち数 350 万人超（2025/03 時点）。",
-    image: AiChatkun,
-    href: "https://lin.ee/t4ZrCO7",
-    tags: [
-      "TypeScript",
-      "Node.js",
-      "Next.js",
-      "OpenAI API",
-      "Azure Function",
-      "Firebase",
-      "Stripe",
-    ],
-    year: "2023",
-  },
-  {
-    title: "さいほんやくくん",
-    description:
-      "日本語 → 英語 → ... → 日本語 のように、複数の言語に翻訳した後、最初の言語に戻す「再翻訳」を行うアプリ。",
-    image: Retranslate,
-    href: "https://retranslate.tttocklll.dev/",
-    tags: ["TypeScript", "React", "Chakra UI", "Vercel"],
-    year: "2022",
-  },
-  {
-    title: "2021年度工学部研究成果発表会 & 五月祭 VTuber 「みつえれ」",
-    description:
-      "東京大学の学園祭にて、学科として出展。Live2D のモデリング、顔のトラッキング、アニメーション、動画制作、およびライブ配信管理を担当した。",
-    image: Mitsuele,
-    href: "https://www.youtube.com/@mitsuele_eeic",
-    tags: [
-      "Live2D",
-      "Python",
-      "OpenCV",
-      "Dlib",
-      "Unity",
-      "Premiere Pro",
-      "OBS",
-    ],
-    year: "2021",
-  },
-  {
-    title: "2021年度工学部研究成果発表会 & 五月祭 出展ページ",
-    description:
-      "東京大学の学園祭にて、学科として出展。複数の企画をまとめたWebページ制作をチームで行った。",
-    image: Mayfes,
-    href: "https://2021.eeic.jp/",
-    tags: ["JavaScript", "Gatsby", "React", "Bootstrap"],
-    year: "2021",
-  },
-  {
-    title: "Parkize",
-    description:
-      "イベント会場における、関係車両の入出庫を管理するWebアプリ。データは Spreadsheet で保存するよう定められていたため、Google Apps Script を用いてデータのやり取りを行っている。",
-    image: Parkize,
-    href: "#",
-    tags: ["Typescript", "React", "GAS", "clasp", "Vercel"],
-    year: "2021",
-  },
-  {
-    title: "カイルくん",
-    description:
-      "[株式会社Strobo] 社内の配送業務およびCS業務を効率化・簡易化するためのSlack Botを制作。PC 操作が不慣れなスタッフでも安全に業務を行えるよう機能を限定したり、メッセージをカスタマイズするなどの工夫を行った。",
-    image: Kairu,
-    href: "https://note.com/strobo_inc/n/n506e23a29c3f",
-    tags: ["Typescript", "Node.js", "Slack API (Bolt)", "AWS Lambda"],
-    year: "2021",
-  },
-  {
-    title: "Moodify",
-    description:
-      "学校現場における、生徒のメンタルを管理する web アプリ。ユーザーインタビューを重ねながら UX の改善を行った。アントレプレナーシップ・チャレンジ2020にて第3位受賞。",
-    image: Moodify,
-    href: "https://github.com/tttocklll/Moodify",
-    tags: ["JavaScript", "React", "MUI", "FastAPI", "SQLite", "Vercel"],
-    year: "2020",
-  },
-  {
-    title: "ぐぐるンです",
-    description:
-      "文字だけのメニューに画像を載せて、わかりやすいものにするアプリ。文字の読み取り精度を上げ、かつ出力動画のfpsをなるべく落とさないように工夫した。※ 2020年度 OpenCV/GL 実験にて作成",
-    image: MenuReader,
-    href: "https://github.com/tttocklll/menu_reader",
-    tags: ["Python", "OpenCV", "OCR"],
-    year: "2020",
-  },
-];
+import { projects } from "../data/projects";
 ---
 
 <Layout title="Works | tttocklll">
   <main>
     <!-- Hero Section -->
-    <section class="min-h-[15vh] sm:min-h-[20vh] flex flex-col items-center justify-center py-8 sm:py-12 md:py-16 mt-12 md:mt-16 relative">
+    <section class="min-h-[15vh] sm:min-h-[20vh] flex flex-col items-center justify-center py-8 sm:py-12 md:py-16 mt-12 md:mt-16 relative section-separator">
       <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div class="absolute right-0 top-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl -z-10 transform translate-x-1/3 -translate-y-1/3"></div>
       <div class="text-center max-w-4xl mx-auto px-3 sm:px-6 relative z-10">
-        <h1 class="text-responsive-2xl font-extralight text-accent opacity-90">Works</h1>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-light text-accent">Works</h1>
       </div>
     </section>
 
     <!-- Projects Grid -->
-    <section class="py-12 relative overflow-hidden">
+    <section class="py-12 relative overflow-hidden section-separator">
       <div class="absolute left-0 bottom-1/4 w-64 h-64 bg-accent/3 rounded-full blur-3xl -z-10 transform -translate-x-1/2"></div>
       <div class="max-w-4xl mx-auto px-3 sm:px-6 relative z-10">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-responsive-grid mb-responsive-lg projects-grid">
           {projects.map((project) => (
-            <ProjectCard
-              title={project.title}
-              description={project.description}
-              image={project.image}
-              href={project.href}
-              tags={project.tags}
-              year={project.year}
-            />
+            <div class="scroll-fade-in">
+              <ProjectCard
+                title={project.title}
+                description={project.description}
+                image={project.image}
+                href={project.href}
+                tags={project.tags}
+                year={project.year}
+              />
+            </div>
           ))}
         </div>
       </div>
@@ -136,114 +38,18 @@ const projects = [
   </main>
 </Layout>
 
+<script>
+  import "../scripts/scroll-animation";
+</script>
+
 <style>
-  /* Add custom animations for project cards on hover */
-  :global(.project-card-container) {
-    transition: all 0.3s ease;
-  }
-
-  :global(.project-card-container:hover) {
-    transform: translateY(-5px);
-  }
-
-  /* Add a subtle fade-in animation for projects */
-  .projects-grid > div {
-    opacity: 0;
-    animation: fadeIn 0.8s ease-out forwards;
-  }
-
-  .projects-grid > div:nth-child(1) { animation-delay: 0.1s; }
-  .projects-grid > div:nth-child(2) { animation-delay: 0.2s; }
-  .projects-grid > div:nth-child(3) { animation-delay: 0.3s; }
-  .projects-grid > div:nth-child(4) { animation-delay: 0.4s; }
-  .projects-grid > div:nth-child(5) { animation-delay: 0.5s; }
-  .projects-grid > div:nth-child(6) { animation-delay: 0.6s; }
-
-  @keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-
-  /* Grid pattern background */
-  .bg-grid-pattern {
-    background-image:
-      linear-gradient(to right, var(--color-accent-muted) 1px, transparent 1px),
-      linear-gradient(to bottom, var(--color-accent-muted) 1px, transparent 1px);
-    background-size: 20px 20px;
-  }
-
-  /* View Project link hover animation */
-  :global(.text-accent.hover\:underline) {
-    position: relative;
-    text-decoration: none !important;
-    transition: all 0.3s ease;
-  }
-
-  :global(.text-accent.hover\:underline)::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 1px;
-    bottom: -2px;
-    left: 0;
-    background-color: var(--color-accent);
-    transition: width 0.3s ease;
-  }
-
-  :global(.text-accent.hover\:underline:hover)::after {
-    width: 100%;
-  }
-
-  /* Enhanced hover effect for project cards */
-  :global(.bg-card-bg) {
-    transform: translateY(0);
-    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.5s cubic-bezier(0.23, 1, 0.32, 1), border 0.3s ease;
-  }
-
-  :global(.bg-card-bg:hover) {
-    transform: translateY(-8px);
-  }
-
-  /* Section subtle decoration */
-  section {
-    position: relative;
-  }
-
-  section::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--color-accent-muted) 20%, var(--color-accent-muted) 80%, transparent);
-    opacity: 0.1;
-    bottom: 0;
-  }
-
-  /* Mobile-specific styles */
   @media (max-width: 768px) {
-    h1.text-4xl {
-      font-size: 2rem;
-    }
-
-    /* Adjust tag sizes for mobile */
-    :global(.px-2.py-1.text-xs) {
-      padding: 0.15rem 0.5rem;
-      font-size: 0.65rem;
-    }
-
-    :global(.flex-wrap.gap-2) {
-      gap: 0.375rem;
-    }
-
-    /* Center content on mobile */
     .projects-grid {
       justify-items: center;
       max-width: 450px;
       margin: 0 auto;
     }
 
-    /* Adjust spacing between sections */
     section {
       padding-top: 2rem;
       padding-bottom: 2rem;

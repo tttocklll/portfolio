@@ -3,7 +3,7 @@ import { Icon } from "astro-icon/components";
 const { title, description, image, href, tags = [], year } = Astro.props;
 ---
 
-<div class="flex flex-col h-full w-full bg-card-bg rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-transparent hover:border-accent/20">
+<div class="flex flex-col h-full w-full card-bg hover:shadow-lg hover:border-accent/20">
   <div class="relative aspect-video bg-background flex items-center justify-center overflow-hidden">
     <img
       src={image.src}

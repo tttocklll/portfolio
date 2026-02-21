@@ -2,10 +2,15 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="py-12 mt-24">
+<footer class="py-12 mt-24 section-separator">
   <div class="max-w-screen-xl mx-auto px-6 md:px-12 lg:px-16">
-    <div class="flex justify-center">
-      <p class="text-text/30 text-xs font-extralight">© {currentYear} tttocklll | OHMURA Tokiya</p>
+    <div class="flex flex-col items-center gap-3">
+      <div class="flex items-center gap-4">
+        <a href="https://github.com/tttocklll" target="_blank" rel="noopener noreferrer" class="text-text/40 hover:text-accent text-sm font-light transition-colors">GitHub</a>
+        <span class="text-text/20">|</span>
+        <a href="https://x.com/tttocklll" target="_blank" rel="noopener noreferrer" class="text-text/40 hover:text-accent text-sm font-light transition-colors">X</a>
+      </div>
+      <p class="text-text/40 text-xs font-light">&copy; {currentYear} tttocklll | OHMURA Tokiya</p>
     </div>
   </div>
 </footer>

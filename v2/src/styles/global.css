@@ -8,14 +8,12 @@
   --color-accent-muted: rgba(246, 63, 53, 0.3);
 }
 
-/* カスタムユーティリティ */
 @layer utilities {
   .card-bg {
     @apply bg-gradient-to-br from-white/40 to-background/90 backdrop-blur-[2px] border border-white/15 shadow-sm transition-all hover:shadow-md hover:border-white/25 rounded-xl overflow-hidden;
   }
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -33,18 +31,15 @@
   background: #de3931;
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom selection color */
 ::selection {
-  background-color: rgba(246, 63, 53, 0.3);
+  background-color: var(--color-accent-muted);
   color: var(--color-text);
 }
 
-/* Base styles */
 body {
   font-family:
     "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Inter",
@@ -56,17 +51,9 @@ body {
   background-color: var(--color-background);
 }
 
-/* Gradient text animation */
 @keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
 .animate-gradient {
@@ -74,13 +61,11 @@ body {
   animation: gradient 4s ease infinite;
 }
 
-/* Soft transitions */
 a,
 button {
   transition: all 0.3s ease;
 }
 
-/* Card hover effects */
 .card-hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -89,7 +74,39 @@ button {
   transform: translateY(-5px);
 }
 
-/* Cursive text */
 .cursive {
   font-family: "Brush Script MT", cursive;
+}
+
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(to right, var(--color-accent-muted) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-accent-muted) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.section-separator {
+  position: relative;
+}
+
+.section-separator::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-accent-muted) 20%, var(--color-accent-muted) 80%, transparent);
+  opacity: 0.1;
+  bottom: 0;
+}
+
+.scroll-fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.scroll-fade-in.scroll-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
